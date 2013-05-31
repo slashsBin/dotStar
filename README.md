@@ -19,15 +19,15 @@ $ git clone https://github.com/slashsBin/dotStar.git
 ```bash
 $ source ./install.star
 ```
-This Script will:
-Make sure your dotStar Files are UpToDate,
-Creates a Symbolic-Link to your files in your Home `~/dotStar`,
-Asks if you like to Copy/OverWrite dotStar files to your Home,
-and Run your BashRC to make dotStar files Effective.
+    This Script will:
+    Make sure your dotStar Files are UpToDate,
+    Creates a Symbolic-Link to your files in your Home `~/dotStar`,
+    Asks if you like to Copy/OverWrite dotStar files to your Home,
+    and Run your BashRC to make dotStar files Effective.
 
-4. If your choose Not to Copy/OverWrite dotFiles @Home:
-You may need further Modification of your Applications and/or your Distribution default dotFiles to Include dotStar Files,
-I Recommand making Symbolic-Links to `~/dotStar` for Files which do Not Exists in your Home and Merge/Include Others with your Own.
+4. If your choose Not to Copy/OverWrite dotFiles @ Home:
+    You may need further Modification of your Applications and/or your Distribution default dotFiles to Include dotStar Files,
+    I Recommand making Symbolic-Links to `~/dotStar` for Files which do Not Exists in your Home and Merge/Include Others with your Own.
 
 5. Fork me and Save your Customizations if you Like
 
