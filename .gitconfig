@@ -1,0 +1,27 @@
+[alias]
+	# Pretty OneLine Log
+	l = log --oneline --graph
+	
+	# Short Status
+	s = status -s
+	
+	# Branches/Tags/Remotes
+    b = branch -a
+    t = tag -l
+    r = remote -v
+
+    # Commit
+    cm = commit -m
+
+[core]
+	# Use custom GitIgnore
+	excludesfile = ~/.gitignore
+
+[color]
+	# Colorize Output when Possible
+	ui = auto
+
+[credential]
+    # Cache Credentials for 12 Hours
+    helper = cache --timeout 43200
+
