@@ -5,11 +5,12 @@ dotStar
 
 Usage/Installation
 ------------------
-1. Manual
-    You can clone/download this repository wherever you want (I'd like to keep it in my personal drive `/slashsBin/dotStar/`),
-    then make a Symbolic-link `ln -s` in your Home `~` to Repo directory, like: `~/dotStar -> /slashsBin/dotStar`,
-    then Copy `cp` files to proper locations which is mostly your Home `~` directory (I'd like to make Symbolic-links to files instead of copying them).
+1. Manual:    
+    You can clone/download this repository wherever you want (I'd like to keep it in my personal drive `/slashsBin/dotStar/`),    
+    then make a Symbolic-link `ln -s` in your Home `~` to Repo directory, like: `~/dotStar -> /slashsBin/dotStar`,    
+    then Copy `cp` files to proper locations which is mostly your Home `~` directory (I'd like to make Symbolic-links to files instead of copying them).    
     Let's do it:
+
     ```bash
     $ cd /slashsBin/MyData/
     $ git clone https://github.com/slashsBin/dotStar.git
@@ -19,7 +20,7 @@ Usage/Installation
     ---- OR ----
     $ ln -s ~/dotStar/*
     ```
-2. Automatic Using install.star Script
+2. Automatic Using install.star Script:    
     (TODO)
 
 Index
