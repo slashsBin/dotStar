@@ -7,18 +7,19 @@ Installation
 ------------
 1. Clone this Repository
 
-```bash
-$ cd /path/to/wherever/you/want/
-$ git clone https://github.com/slashsBin/dotStar.git
-```
+    ```bash
+    $ cd /path/to/wherever/you/want/
+    $ git clone https://github.com/slashsBin/dotStar.git
+    ```
 
 2. Customize the dotStar Files to your Own liking
 
 3. Run Install/Updater Script
 
-```bash
-$ source ./install.star
-```
+    ```bash
+    $ source ./install.star
+    ```
+    
     This Script will:
     Make sure your dotStar Files are UpToDate,
     Creates a Symbolic-Link to your files in your Home `~/dotStar`,
