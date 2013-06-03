@@ -10,3 +10,5 @@ ControlPersist=yes
 User=root
 
 PreferredAuthentications=password,gssapi-with-mic,hostbased,publickey,keyboard-interactive
+
+ServerAliveInterval 600
