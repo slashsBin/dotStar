@@ -1,0 +1,7 @@
+Compression=yes
+CompressionLevel=9
+ConnectTimeout=600
+ControlMaster=yes
+ControlPersist=yes
+User=root
+PreferredAuthentications=password,gssapi-with-mic,hostbased,publickey,keyboard-interactive
