@@ -25,3 +25,6 @@
     # Cache Credentials for 12 Hours
     helper = cache --timeout 43200
 
+[merge]
+	# Merld Diff Tool
+	tool = meld
