@@ -1,0 +1,14 @@
+Compression=yes
+CompressionLevel=9
+
+ConnectTimeout=600
+
+ControlMaster=auto
+ControlPath=/tmp/ssh_master__%r@%h:%p
+ControlPersist=yes
+
+User=root
+
+PreferredAuthentications=password,gssapi-with-mic,hostbased,publickey,keyboard-interactive
+
+ServerAliveInterval 600

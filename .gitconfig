@@ -31,4 +31,5 @@
 	helper = cache --timeout 43200
 
 [merge]
-	tool=meld
+	# Meld Diff Tool
+	tool = meld
