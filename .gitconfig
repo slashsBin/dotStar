@@ -6,22 +6,29 @@
 	s = status -s
 	
 	# Branches/Tags/Remotes
-    b = branch -a
-    t = tag -l
-    r = remote -v
+	b = branch -a
+	t = tag -l
+	r = remote -v
 
-    # Commit
-    cm = commit -m
+	# Commit
+	cm = commit -m
 
 [core]
 	# Use custom GitIgnore
 	excludesfile = ~/.gitignore
+	
+	# Set ViM as Default Editor
+	editor = vim
 
 [color]
 	# Colorize Output when Possible
-	ui = auto
+	ui = true
+	status = auto
+	branch = auto
 
 [credential]
-    # Cache Credentials for 12 Hours
-    helper = cache --timeout 43200
+	# Cache Credentials for 12 Hours
+	helper = cache --timeout 43200
 
+[merge]
+	tool=meld
