@@ -25,3 +25,5 @@ set title
 " Show Partial Commands
 set showcmd
 
+" Color Theme
+colorscheme github
