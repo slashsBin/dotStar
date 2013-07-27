@@ -7,8 +7,8 @@ ControlMaster=auto
 ControlPath=/tmp/ssh_master__%r@%h:%p
 ControlPersist=yes
 
-User=root
+User=mohammad
 
 PreferredAuthentications=publickey,gssapi-with-mic,hostbased,keyboard-interactive,password
 
-ServerAliveInterval 600
+ServerAliveInterval 60
