@@ -1,9 +1,36 @@
+[user]                                                                                                                
+	name = Mohammad Shokri
+	email = shokri.md@gmail.com
+
 [alias]
-	# Pretty OneLine Log
+	s = status -s
+	st = status
+	
+	ci = commit
+	
+	br = branch
+	
+	co = checkout
+	
+	df = diff
+	dc = diff --cached
+	
 	l = log --oneline --graph
+	lg = log -p
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	
+	ls = ls-files
+
+	# Show files ignored by git:
+	ign = ls-files -o -i --exclude-standard
+    
+    
+	# Pretty OneLine Log
+	
 	
 	# Short Status
-	s = status -s
+	
 	
 	# Branches/Tags/Remotes
 	b = branch -a
@@ -22,9 +49,21 @@
 
 [color]
 	# Colorize Output when Possible
-	ui = true
-	status = auto
-	branch = auto
+	ui = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
 
 [credential]
 	# Cache Credentials for 12 Hours
