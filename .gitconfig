@@ -47,6 +47,9 @@
 	# Set ViM as Default Editor
 	editor = vim
 
+	# Compression Level
+	compression = 9
+
 [color]
 	# Colorize Output when Possible
 	ui = auto
