@@ -25,5 +25,8 @@ set title
 " Show Partial Commands
 set showcmd
 
+" Print Margin
+set colorcolumn=80
+
 " Color Theme
 colorscheme github
