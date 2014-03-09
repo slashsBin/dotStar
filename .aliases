@@ -10,6 +10,9 @@ alias v="vim"
 # Enable aliases to be sudo'ed
 alias sudo="sudo "
 
+# Gzip-enabled `curl`
+alias gurl="curl --compressed"
+
 # HTTP Request Methods
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
     alias "$method"="curl -X $method"
