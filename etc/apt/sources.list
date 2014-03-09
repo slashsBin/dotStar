@@ -1,0 +1,23 @@
+# Security updates
+deb http://security.debian.org/ wheezy/updates main contrib non-free
+deb-src http://security.debian.org/ wheezy/updates main contrib non-free
+
+## Debian mirror
+
+# Base repository
+deb http://ftp.debian.org/debian wheezy main contrib non-free
+deb-src http://ftp.debian.org/debian wheezy main contrib non-free
+
+# Stable updates
+deb http://ftp.debian.org/debian wheezy-updates main contrib non-free
+deb-src http://ftp.debian.org/debian wheezy-updates main contrib non-free
+
+# Stable backports
+deb http://ftp.debian.org/debian wheezy-backports main contrib non-free
+deb-src http://ftp.debian.org/debian wheezy-backports main contrib non-free
+
+# Testing
+#deb http://ftp.debian.org/debian testing main contrib non-free
+#deb-src http://ftp.debian.org/debian testing main contrib non-free
+#deb http://security.debian.org/ testing/updates main contrib non-free
+#deb-src http://security.debian.org/ testing/updates main contrib non-free

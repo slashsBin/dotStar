@@ -3,43 +3,42 @@
 	email = shokri.md@gmail.com
 
 [alias]
+	# Status
 	s = status -s
 	st = status
 	
+	# Commit
 	ci = commit
 	
+	# Branch
 	br = branch
+	b = branch -av
 	
+	# CheckOut
 	co = checkout
 	
+	# Diff
 	df = diff
 	dc = diff --cached
 	
-	l = log --oneline --graph
-	lg = log -p
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit
-	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	# Log
+	l = log --graph --decorate --pretty=oneline --abbrev-commit
+	last = log -1 HEAD
 	
+	# List
 	ls = ls-files
 
 	# Show files ignored by git:
 	ign = ls-files -o -i --exclude-standard
-    
-    
-	# Pretty OneLine Log
 	
-	
-	# Short Status
-	
-	
-	# Branches/Tags/Remotes
-	b = branch -a
+	# Tags
 	t = tag -l
+
+	# Remotes
 	r = remote -v
 
-	# Commit
-	cm = commit -m
-
+	# Stage
+	unstage = reset HEAD --
 [core]
 	# Use custom GitIgnore
 	excludesfile = ~/.gitignore

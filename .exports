@@ -16,3 +16,5 @@ export PAGER="most"
 # Always enable colored `grep` output
 export GREP_OPTIONS="--color=auto"
 
+# Git Ignore Invalid SSL Certificate
+export GIT_SSL_NO_VERIFY=true

@@ -1,0 +1,4 @@
+# NginX
+# Repo Key: http://nginx.org/keys/nginx_signing.key
+deb http://nginx.org/packages/debian/ wheezy nginx
+deb-src http://nginx.org/packages/debian/ wheezy nginx
