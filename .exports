@@ -1,6 +1,11 @@
 # Set Vim as Default Text Editor
 export EDITOR="vim"
 
+# Larger bash history (allow 32^3 entries)
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL=ignoredups
+
 # Prefer Locale US and Encoding UTF8
 export LANG="en_US"
 export LC_ALL="en_US.UTF-8"

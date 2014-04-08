@@ -1,9 +1,22 @@
+" Use the Molokai theme (originally created for TextMate by Wimer Hazenberg)
+colorscheme molokai
+
 " Use ViM instead of Vi
 set nocompatible
+
+" Enhance command-line completion
+set wildmenu
 
 " UTF8 as Default
 set termencoding=utf-8
 set encoding=utf-8
+
+" Centralize backups, swapfiles and undo history
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if exists("&undodir")
+	set undodir=~/.vim/undo
+endif
 
 " Syntax Highlighting
 syntax on
@@ -16,6 +29,9 @@ set showmatch
 
 " Current Line
 set cursorline
+
+" Enable mouse in all modes
+set mouse=a
 
 " Tab Width as 4 Spaces
 set tabstop=4
