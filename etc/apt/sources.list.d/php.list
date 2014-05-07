@@ -1,0 +1,3 @@
+# Sqeeze for downgrading php to 5.3.x
+deb http://ftp.debian.org/debian/ squeeze main contrib non-free
+deb http://security.debian.org/ squeeze/updates main contrib non-free
