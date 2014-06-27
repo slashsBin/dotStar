@@ -1,6 +1,3 @@
-" Use the Molokai theme (originally created for TextMate by Wimer Hazenberg)
-colorscheme molokai
-
 " Use ViM instead of Vi
 set nocompatible
 
