@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookmarks>
+   <site url="http://download.eclipse.org/releases/luna" selected="true" name="Luna"/>
+   <site url="http://download.eclipse.org/eclipse/updates/4.4" selected="true" name="The Eclipse Project Updates"/>
+   <site url="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/luna" selected="true" name="Papyrus"/>
+   <site url="http://download.eclipse.org/tools/pdt/updates/3.3" selected="true" name="PDT"/>
+   <site url="http://download.eclipse.org/egit/updates" selected="true" name="EGit"/>
+</bookmarks>
