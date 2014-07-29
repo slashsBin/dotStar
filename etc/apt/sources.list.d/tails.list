@@ -1,0 +1,2 @@
+deb http://deb.tails.boum.org/ stable main
+deb-src http://deb.tails.boum.org/ stable main
