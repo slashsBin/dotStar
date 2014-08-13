@@ -1,4 +1,4 @@
-[user]                                                                                                                
+[user] 
 	name = Mohammad Shokri
 	email = shokri.md@gmail.com
 
@@ -39,6 +39,7 @@
 
 	# Stage
 	unstage = reset HEAD --
+
 [core]
 	# Use custom GitIgnore
 	excludesfile = ~/.gitignore
@@ -52,16 +53,19 @@
 [color]
 	# Colorize Output when Possible
 	ui = auto
+
 [color "branch"]
 	current = yellow reverse
 	local = yellow
 	remote = green
+
 [color "diff"]
 	meta = yellow
 	frag = magenta
 	old = red
 	new = green
 	whitespace = red reverse
+
 [color "status"]
 	added = yellow
 	changed = green
@@ -73,4 +77,7 @@
 
 [merge]
 	# Meld Diff Tool
-	tool = meld
+	tool = kdiff3
+
+[push]
+	default = simple
