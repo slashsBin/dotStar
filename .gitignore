@@ -19,3 +19,7 @@ local.properties
 
 #### Linux ####
 *~
+
+#### KDevelop4 ####
+*.kdev4
+.kdev4/
