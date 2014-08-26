@@ -20,6 +20,7 @@ local.properties
 #### Linux ####
 *~
 
-#### KDevelop4 ####
+#### KDevelop4 / Kate ####
 *.kdev4
 .kdev4/
+*.kate-swp
