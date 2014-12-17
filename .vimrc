@@ -44,11 +44,11 @@ set termencoding=utf-8
 set encoding=utf-8
 
 " Centralize backups, swapfiles and undo history
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
-if exists("&undodir")
-	set undodir=~/.vim/undo
-endif
+"set backupdir=~/.vim/backups
+"set directory=~/.vim/swaps
+"if exists("&undodir")
+"	set undodir=~/.vim/undo
+"endif
 
 " Syntax Highlighting
 syntax on
