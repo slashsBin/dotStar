@@ -20,6 +20,9 @@ local.properties
 #### Linux ####
 *~
 
+# KDE directory preferences
+.directory
+
 #### KDevelop4 / Kate ####
 *.kdev4
 .kdev4/
