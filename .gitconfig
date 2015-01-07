@@ -77,7 +77,7 @@
 
 [merge]
 	# Meld Diff Tool
-	tool = kdiff3
+	tool = meld
 
 [push]
 	default = simple

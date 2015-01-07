@@ -1,0 +1,6 @@
+# Opera Browser
+#
+# GPG Key:
+# wget -O - http://deb.opera.com/archive.key | sudo apt-key add -
+
+deb http://deb.opera.com/opera/ stable non-free

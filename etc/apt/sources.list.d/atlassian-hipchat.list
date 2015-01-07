@@ -1,0 +1,5 @@
+# Atlassian HipChat
+#
+# PGP Key: wget -O - https://www.hipchat.com/keys/hipchat-linux.key | apt-key add -
+
+deb http://downloads.hipchat.com/linux/apt stable main

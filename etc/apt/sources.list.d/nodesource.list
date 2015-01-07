@@ -1,0 +1,7 @@
+# NodeJS
+#
+# KeyRing:
+# curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
+
+deb https://deb.nodesource.com/node jessie main
+deb-src https://deb.nodesource.com/node jessie main
