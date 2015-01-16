@@ -1,14 +1,21 @@
-Compression=yes
-CompressionLevel=9
-
-ConnectTimeout=600
-
-ControlMaster=auto
-ControlPath=/tmp/ssh_master__%r@%h:%p
-ControlPersist=yes
-
-User=mohammad
-
-PreferredAuthentications=publickey,gssapi-with-mic,hostbased,keyboard-interactive,password
-
-ServerAliveInterval 60
+Host *
+  # Compression
+  Compression = yes
+  CompressionLevel = 9
+  #Initial TimeOut
+  #ConnectTimeout = 600
+  # Multiplexing over TCP
+  ControlMaster = auto
+  ControlPath = /tmp/ssh_master__%r@%h:%p
+  ControlPersist = 30m
+  # Default Options
+  User = mohammad
+  Port = 22
+  # Auth
+  PreferredAuthentications = publickey,gssapi-with-mic,hostbased,keyboard-interactive,password
+  # Forward Local Keys to Remote Host, to hop from Host-to-Host
+  #ForwardAgent = yes
+  # Keep Connection Alive
+  ServerAliveInterval = 30
+  # ASCII Key
+  VisualHostKey = yes
