@@ -50,6 +50,9 @@
 	# Compression Level
 	compression = 9
 
+	# Ignore X-Bit Difference
+	fileMode = false
+
 [color]
 	# Colorize Output when Possible
 	ui = auto
