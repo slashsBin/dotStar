@@ -57,6 +57,9 @@
 	# Ignore X-Bit Difference
 	fileMode = false
 
+	# Linux/Mac Compatible Line Endings
+	autocrlf = input
+
 [color]
 	# Colorize Output when Possible
 	ui = auto
@@ -87,4 +90,9 @@
 	tool = meld
 
 [push]
+  # Limit Pushes to Current Branch
 	default = simple
+
+[branch]
+  # Fetch & ReBase, not Merge
+  autosetuprebase = always
