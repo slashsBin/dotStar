@@ -41,6 +41,9 @@
 	# Stage
 	unstage = reset HEAD --
 
+	# SubModules
+	pushall = push --recurse-submodules=on-demand
+
 [core]
 	# Use custom GitIgnore
 	excludesfile = ~/.gitignore
