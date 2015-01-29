@@ -1,4 +1,4 @@
-[user] 
+[user]
 	name = Mohammad Shokri
 	email = shokri.md@gmail.com
 
@@ -6,31 +6,32 @@
 	# Status
 	s = status -s
 	st = status
-	
+
 	# Commit
 	ci = commit
-	
+
 	# Branch
 	br = branch
 	b = branch -av
-	
+
 	# CheckOut
 	co = checkout
-	
+
 	# Diff
 	df = diff
 	dc = diff --cached
-	
+
 	# Log
-	l = log --graph --decorate --pretty=oneline --abbrev-commit
+	l = log --pretty=format:'%h %s [%an]' --graph
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	last = log -1 HEAD
-	
+
 	# List
 	ls = ls-files
 
 	# Show files ignored by git:
 	ign = ls-files -o -i --exclude-standard
-	
+
 	# Tags
 	t = tag -l
 
@@ -43,7 +44,7 @@
 [core]
 	# Use custom GitIgnore
 	excludesfile = ~/.gitignore
-	
+
 	# Set ViM as Default Editor
 	editor = vim
 
