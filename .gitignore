@@ -27,3 +27,10 @@ local.properties
 *.kdev4
 .kdev4/
 *.kate-swp
+
+# Created by https://www.gitignore.io
+
+### OSX ###
+.DS_Store
+._*
+

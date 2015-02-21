@@ -48,8 +48,8 @@
 	# Use custom GitIgnore
 	excludesfile = ~/.gitignore
 
-	# Set ViM as Default Editor
-	editor = vim
+	# Set ATOM as Default Editor
+	editor = "atom --wait"
 
 	# Compression Level
 	compression = 9
