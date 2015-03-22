@@ -6,8 +6,8 @@ Host *
   #ConnectTimeout = 600
   # Multiplexing over TCP
   ControlMaster = auto
-  ControlPath = /tmp/ssh_master__%r@%h:%p
-  ControlPersist = 30m
+  ControlPath = /tmp/ssh_mux__%r@%h_%p
+  ControlPersist = 1h
   # Default Options
   User = mohammad
   Port = 22
