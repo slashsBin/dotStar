@@ -89,6 +89,12 @@
 	# Meld Diff Tool
 	tool = meld
 
+[http]
+      # Parallel HTTP Requests
+      maxRequests = 8
+      # Max Post Buffer Size in Bytes, Chunked for Bigger
+      postBuffer = 524288000
+
 [push]
   # Limit Pushes to Current Branch
 	default = simple
