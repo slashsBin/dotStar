@@ -1,6 +1,11 @@
 # My Real Public IP
 alias ifconfig.me="curl ifconfig.me"
 
+# IO
+alias mkdir='mkdir -vp'
+alias cp='cp -v'
+alias mv='mv -v'
+
 # Git
 alias g="git"
 
@@ -17,4 +22,3 @@ alias gurl="curl --compressed"
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
     alias "$method"="curl -X $method"
 done
-
