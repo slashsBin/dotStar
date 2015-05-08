@@ -49,7 +49,8 @@
 	excludesfile = ~/.gitignore
 
 	# Set ATOM as Default Editor
-	editor = "atom --wait"
+	#editor = "atom --wait"
+	#editor = "vim"
 
 	# Compression Level
 	compression = 9
@@ -83,7 +84,8 @@
 
 [credential]
 	# Cache Credentials for 12 Hours
-	helper = cache --timeout 43200
+	#helper = cache --timeout 43200
+	helper = osxkeychain
 
 [merge]
 	# Meld Diff Tool
@@ -102,13 +104,4 @@
 [branch]
   # Fetch & ReBase, not Merge
   autosetuprebase = always
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
+
