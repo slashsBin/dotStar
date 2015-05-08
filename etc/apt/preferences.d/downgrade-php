@@ -1,17 +1,17 @@
 Package: php5*
-Pin: release a=oldstable
+Pin: release a=squeeze
 Pin-Priority: 700
 
-Package: libapache2-mod-php5    
-Pin: release a=oldstable
+Package: libapache2-mod-php5
+Pin: release a=squeeze
 Pin-Priority: 700
 
 Package: php-pear
-Pin: release a=oldstable
+Pin: release a=squeeze
 Pin-Priority: 700
 
 Package: php-apc
-Pin: release a=oldstable
+Pin: release a=squeeze
 Pin-Priority: 700
 
 Package: *
