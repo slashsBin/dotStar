@@ -22,3 +22,7 @@ alias gurl="curl --compressed"
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
     alias "$method"="curl -X $method"
 done
+
+# Colorize Output
+alias grep="/bin/grep --color=auto"
+alias ll="ls --color=auto -laF"
