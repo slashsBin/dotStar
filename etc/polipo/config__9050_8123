@@ -1,0 +1,7 @@
+proxyAddress = 0.0.0.0
+proxyPort = 8123
+
+logSyslog = true
+logFile = /var/log/polipo/polipo.log
+
+socksParentProxy = 127.0.0.1:9050
