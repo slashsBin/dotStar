@@ -1,17 +1,17 @@
 # DotDeb.org
-# 
+#
 # GnuPG Key:
 #     wget http://www.dotdeb.org/dotdeb.gpg
 #     sudo apt-key add dotdeb.gpg
 
 # Main Repo
-deb http://packages.dotdeb.org wheezy all
-deb-src http://packages.dotdeb.org wheezy all
+deb http://packages.dotdeb.org jessie all
+deb-src http://packages.dotdeb.org jessie all
 
-# PHP 5.5
+# Wheezy PHP 5.5
 #deb http://packages.dotdeb.org wheezy-php55 all
 #deb-src http://packages.dotdeb.org wheezy-php55 all
 
-# PHP 5.6
-deb http://packages.dotdeb.org wheezy-php56 all
-deb-src http://packages.dotdeb.org wheezy-php56 all
+# Wheezy PHP 5.6
+#deb http://packages.dotdeb.org wheezy-php56 all
+#deb-src http://packages.dotdeb.org wheezy-php56 all
