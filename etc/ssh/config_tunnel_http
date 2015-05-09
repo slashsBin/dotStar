@@ -1,0 +1,21 @@
+# Tunnel SSH throw Multiple HTTP Proxies
+#
+# Configured to Access SSH via Local WebServer HTTP Proxy
+# that Supports CONNECT
+#
+# Requires proxytunnel Command to be Installed Locally
+# sudo apt-get install proxytunnel
+
+# 1 Chain Proxy = 1 HTTP Proxy
+Host server1
+  Hostname=127.0.0.1
+  Port=22
+  StrictHostKeyChecking=no
+  ProxyCommand /usr/bin/proxytunnel -v -p server1IP:server1WWWPort -d %h:%p
+
+# 2 Chains Proxy = 2 HTTP Proxies
+Host server2
+  Hostname=127.0.0.1
+  Port=22
+  StrictHostKeyChecking=no
+  ProxyCommand /usr/bin/proxytunnel -v -p secondProxyIP:secondProxyPort -r server2IP:server2WWWPort -d %h:%p
