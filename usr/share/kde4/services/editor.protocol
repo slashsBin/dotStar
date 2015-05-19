@@ -1,0 +1,11 @@
+[Protocol]
+exec=/usr/bin/atom "%u"
+protocol=editor
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false
