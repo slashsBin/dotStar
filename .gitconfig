@@ -44,6 +44,9 @@
 	# SubModules
 	pushall = push --recurse-submodules=on-demand
 
+	# GitIgnore.IO
+	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+
 [core]
 	# Use custom GitIgnore
 	excludesfile = ~/.gitignore
