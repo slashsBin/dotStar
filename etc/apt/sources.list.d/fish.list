@@ -1,0 +1,6 @@
+# Fish Shell
+# 
+# wget http://download.opensuse.org/repositories/shells:fish:release:2/Debian_8.0/Release.key
+# apt-key add - < Release.key
+
+deb http://download.opensuse.org/repositories/shells:/fish:/release:/2/Debian_8.0/ /
