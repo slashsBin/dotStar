@@ -1,10 +1,25 @@
+# Logging
 Log notice file /var/log/tor/log
 
+# ARM
+# sudo -u debian-tor arm
+ControlPort 9051
+CookieAuthentication 1
 DisableDebuggerAttachment 0
 
-VirtualAddrNetworkIPv4 10.192.0.0/10
+# Transparent Torification
+# See https://trac.torproject.org/projects/tor/wiki/doc/TransparentProxy
+# See ./middleBox.sh
+VirtualAddrNetworkIPv4 10.192.0.0/16
 AutomapHostsOnResolve 1
 TransPort 9040
-TransListenAddress 192.168.168.4
-DNSPort 53
-DNSListenAddress 192.168.168.4
+TransListenAddress 192.168.168.168
+DNSPort 5353
+DNSListenAddress 192.168.168.168
+
+# Bridges & PluggableTransports
+# See https://github.com/obfuscation/documentation
+ClientTransportPlugin obfs3 exec /usr/local/bin/obfsproxy managed
+ClientTransportPlugin obfs4 exec /usr/bin/obfs4proxy
+ClientTransportPlugin fte exec /usr/local/bin/fteproxy --managed
+UseBridges 0
