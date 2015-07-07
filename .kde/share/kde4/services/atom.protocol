@@ -1,10 +1,10 @@
 [Protocol]
-exec=/usr/bin/atom "%u"
-protocol=editor
+exec=/usr/bin/atom -- %u
+protocol=atom
 input=none
 output=none
 helper=true
-listing=
+listing=false
 reading=false
 writing=false
 makedir=false
