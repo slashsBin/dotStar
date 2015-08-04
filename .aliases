@@ -1,3 +1,8 @@
+# GoTo
+alias w="cd ~/WorkSpace"
+alias t="cd ~/var/tmp"
+alias d="cd ~/Downloads"
+
 # My Real Public IP
 alias ifconfig.me="curl ifconfig.me"
 
