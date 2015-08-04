@@ -87,18 +87,22 @@
 
 [credential]
 	# Cache Credentials for 12 Hours
-	#helper = cache --timeout 43200
-	helper = osxkeychain
+	helper = cache --timeout 43200
+	#helper = osxkeychain
 
 [merge]
 	# Meld Diff Tool
 	tool = meld
+	# P4Merge
+	#tool = p4merge
+	# OSX XCode
+	#tool = opendiff
 
 [http]
       # Parallel HTTP Requests
-      maxRequests = 8
+      #maxRequests = 8
       # Max Post Buffer Size in Bytes, Chunked for Bigger
-      postBuffer = 524288000
+      #postBuffer = 524288000
 
 [push]
   # Limit Pushes to Current Branch
@@ -107,4 +111,8 @@
 [branch]
   # Fetch & ReBase, not Merge
   autosetuprebase = always
+
+[difftool "p4merge"]
+	# P4Merge for OSX
+	#cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
 
