@@ -31,3 +31,14 @@ done
 # Colorize Output
 alias grep="/bin/grep --color=auto"
 alias ll="ls --color=auto -laF"
+
+# MySQL
+# --opt := --add-drop-table --add-locks --create-options --disable-keys --extended-insert --lock-tables --quick --set-charset
+# Usage:
+#     Dump:
+#     $ mydump -r dump.sql
+#     Restore:
+#     $ mysql --binary-mode --force databaseName < dump.sql
+alias mydump="mysqldump --all-databases --lock-all-tables --opt --complete-insert --skip-extended-insert"
+alias mydumpdata="mydump --no-create-info"
+alias mydumpschema="mydump --no-data"
