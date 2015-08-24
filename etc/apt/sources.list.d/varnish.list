@@ -3,4 +3,4 @@
 # GPG Key:
 # curl https://repo.varnish-cache.org/GPG-key.txt | apt-key add -
 
-deb https://repo.varnish-cache.org/debian/ wheezy varnish-4.0
+deb https://repo.varnish-cache.org/debian/ jessie varnish-4.0
