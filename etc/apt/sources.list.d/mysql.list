@@ -12,4 +12,4 @@ deb http://repo.mysql.com/apt/debian/ jessie mysql-5.6
 deb-src http://repo.mysql.com/apt/debian/ jessie mysql-5.6
 
 # MySQL Utilities
-deb http://repo.mysql.com/apt/debian/ jessie utilities-1.5
+deb http://repo.mysql.com/apt/debian/ jessie mysql-utilities-1.5
