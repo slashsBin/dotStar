@@ -1,0 +1,20 @@
+# HP Software Delivery Repository
+# Linux_SWdeliverables@external.groups.hp.com
+# http://downloads.linux.hp.com/SDR/
+#
+# HP Software Delivery Repository BootStrap Script
+# http://downloads.linux.hp.com/SDR/add_repo.sh
+#
+# GPG Key:
+# http://downloads.linux.hp.com/SDR/keys.html
+# $ curl http://downloads.linux.hp.com/SDR/hpPublicKey1024.pub | apt-key add -
+# $ curl http://downloads.linux.hp.com/SDR/hpPublicKey2048.pub | apt-key add -
+# $ curl http://downloads.linux.hp.com/SDR/hpPublicKey2048_key1.pub | apt-key add -
+
+# HP Management Component Pack for ProLiant
+# http://downloads.linux.hp.com/SDR/project/mcp/
+deb http://downloads.linux.hp.com/SDR/repo/mcp jessie/current non-free
+
+# HP ProLiant Scripting Toolkit
+# http://downloads.linux.hp.com/SDR/project/stk/
+deb http://downloads.linux.hp.com/SDR/repo/stk jessie/current non-free
