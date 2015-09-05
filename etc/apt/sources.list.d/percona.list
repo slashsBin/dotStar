@@ -1,0 +1,11 @@
+# Percona MySQL Software & Tools
+# https://launchpad.net/percona-toolkit
+# https://www.percona.com/doc/percona-toolkit/
+#
+# GPG Key:
+# $ apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
+# or
+# $ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1C4CBDCDCD2EFD2A
+
+deb http://repo.percona.com/apt jessie main
+#deb-src http://repo.percona.com/apt jessie main
