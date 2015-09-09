@@ -1,0 +1,6 @@
+# GlusterFS
+#
+# GPG:
+# $ curl -L http://download.gluster.org/pub/gluster/glusterfs/3.6/LATEST/Debian/jessie/pub.key | sudo apt-key add -
+
+deb http://download.gluster.org/pub/gluster/glusterfs/3.6/LATEST/Debian/jessie/apt jessie main

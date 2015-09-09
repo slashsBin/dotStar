@@ -1,0 +1,5 @@
+# SonarQube
+# http://sonar-pkg.sourceforge.net/
+
+deb http://downloads.sourceforge.net/project/sonar-pkg/deb binary/
+

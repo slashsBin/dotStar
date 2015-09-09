@@ -1,4 +1,5 @@
 # GoAccess
 #
 # wget -O - http://deb.goaccess.io/gnugpg.key | sudo apt-key add -
+
 deb http://deb.goaccess.io jessie main

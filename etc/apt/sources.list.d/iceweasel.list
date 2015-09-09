@@ -1,1 +1,3 @@
+# MozDeb
+
 deb http://mozilla.debian.net/ wheezy-backports iceweasel-release
