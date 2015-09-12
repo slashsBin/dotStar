@@ -1,36 +1,25 @@
+# Apache2 SSH over HTTP Tunnel
+#
 # Requires Apache Modules: proxy & proxy_connect
 # sudo a2enmod proxy
 # sudo a2enmod proxy_connect
 # sudo service apache2 restart
+#
+# Replace <X.X.X.X> with White-Listed IP Address
+#
+# You should Use Some Port that is SSL Compatible(like 563):
+# $ cat /etc/services | grep 'over SSL'
 
 <VirtualHost *:80>
-        ServerAdmin webmaster@local
 
-        DocumentRoot /var/www
-        <Directory />
-                Options FollowSymLinks
-                AllowOverride None
-        </Directory>
-        <Directory /var/www/>
-                Options Indexes FollowSymLinks MultiViews
-                AllowOverride None
-                Order allow,deny
-                allow from all
-        </Directory>
-
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-
-        LogLevel warn
-
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
-
-        # HTTP Proxy with CONNECT
-        ProxyRequests On
-        ProxyBadHeader Ignore
-        ProxyVia Full
-        AllowConnect 443
-        <Proxy *>
-                Order deny,allow
-        </Proxy>
+    # HTTP Proxy with CONNECT
+    ProxyRequests On
+    ProxyBadHeader Ignore
+    ProxyVia Full
+    AllowConnect 563
+    <Proxy *>
+        Order allow,deny
+        Allow from <X.X.X.X>
+    </Proxy>
 
 </VirtualHost>
