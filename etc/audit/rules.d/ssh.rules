@@ -1,0 +1,7 @@
+# OpenSSH Rules
+#
+# Keys:
+#     - CFG_sshd
+
+## ssh configuration
+-w /etc/ssh/sshd_config -k CFG_sshd

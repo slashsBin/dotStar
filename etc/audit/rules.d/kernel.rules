@@ -1,0 +1,18 @@
+# Kernel Rules
+#
+# Keys:
+#     - CFG_kernel
+#     - CFG_modules
+
+## kernel parameters
+-w /etc/sysctl.conf -p wa -k CFG_kernel
+
+## modprobe configuration
+-w /etc/modprobe.d/ -p wa -k CFG_modules
+
+## Optional - might want to watch module insertion
+#-w /sbin/insmod -p x -k CFG_modules
+#-w /sbin/rmmod -p x -k CFG_modules
+#-w /sbin/modprobe -p x -k CFG_modules
+#-a always,exit -F arch=b32 -S init_module -S delete_module -k CFG_modules
+#-a always,exit -F arch=b64 -S init_module -S delete_module -k CFG_modules

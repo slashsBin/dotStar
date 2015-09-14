@@ -1,0 +1,35 @@
+# AuditD Rules
+#
+# Keys:
+#     - LOG_audit
+#     - CFG_audit
+#
+# See "/usr/share/doc/auditd/examples/README.debian"
+
+# First rule - delete all
+-D
+
+# Increase the buffers to survive stress events.
+# Make this bigger for busy systems
+# Test with:
+# $ sudo auditctl -s
+-b 1024
+
+# Lock it up
+-e 2
+
+## FAU_SAR.1, FAU_SAR.2, FMT_MTD.1
+## successful and unsuccessful attempts to read information from the
+## audit records; all modifications to the audit trail
+##
+-w /var/log/audit/ -k LOG_audit
+
+## 
+## FAU_SEL.1, FMT_MTD.1
+## modifications to audit configuration that occur while the audit
+## collection functions are operating; all modications to the set of
+## audited events
+##
+-w /etc/audit/ -p wa -k CFG_audit
+-w /etc/libaudit.conf -p wa -k CFG_audit
+-w /etc/audisp/ -p wa -k CFG_audit

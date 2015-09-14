@@ -1,0 +1,19 @@
+# Mandatory Access Control Rules
+#
+# Keys:
+#     - CFG_selinux
+#     - CFG_pam
+
+## SELinux Configuration
+-w /etc/selinux/ -p wa -k CFG_selinux
+
+## PAM Configuration
+-w /etc/pam.d/ -p wa -k CFG_pam
+-w /etc/security/access.conf -p wa  -k CFG_pam
+-w /etc/security/limits.conf -p wa  -k CFG_pam
+-w /etc/security/pam_env.conf -p wa -k CFG_pam
+-w /etc/security/namespace.conf -p wa -k CFG_pam
+-w /etc/security/namespace.d/ -p wa -k CFG_pam
+-w /etc/security/namespace.init -p wa -k CFG_pam
+-w /etc/security/sepermit.conf -p wa -k CFG_pam
+-w /etc/security/time.conf -p wa -k CFG_pam

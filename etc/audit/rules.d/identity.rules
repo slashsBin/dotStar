@@ -1,0 +1,25 @@
+# Identity Rules
+#
+# Keys:
+#     - CFG_identity
+#     - CFG_sudoers
+#     - CFG_login
+#     - LOG_login
+
+## user, group, password databases
+-w /etc/group -p wa -k CFG_identity
+-w /etc/passwd -p wa -k CFG_identity
+-w /etc/gshadow -k CFG_identity
+-w /etc/shadow -k CFG_identity
+-w /etc/security/opasswd -k CFG_identity
+
+## login configuration and information
+-w /etc/login.defs -p wa -k CFG_login
+-w /etc/securetty -p wa -k CFG_login
+-w /var/run/faillock/ -p wa -k LOG_login
+-w /var/log/lastlog -p wa -k LOG_login
+-w /var/log/tallylog -p wa -k LOG_login
+
+## sudo configuration
+-w /etc/sudoers -k CFG_sudoers
+-w /etc/sudoers.d/ -k CFG_sudoers
