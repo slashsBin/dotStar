@@ -5,24 +5,12 @@
 [alias]
 	# Status
 	s = status -s
-	st = status
-
-	# Commit
-	ci = commit
 
 	# Branch
-	br = branch
 	b = branch -av
 
-	# CheckOut
-	co = checkout
-
-	# Diff
-	df = diff
-	dc = diff --cached
-
 	# Log
-	l = log --pretty=format:'%h %s [%an]' --graph
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	last = log -1 HEAD
 
@@ -53,6 +41,8 @@
 
 	# Set ATOM as Default Editor
 	#editor = "atom --wait"
+
+	# Set ViM as Default Editor
 	#editor = "vim"
 
 	# Compression Level
@@ -86,15 +76,19 @@
 	untracked = cyan
 
 [credential]
-	# Cache Credentials for 12 Hours
-	helper = cache --timeout 43200
+	# Cache Credentials for 1 Hour
+	helper = cache --timeout 3600
+
+	# OSX KeyChain
 	#helper = osxkeychain
 
 [merge]
 	# Meld Diff Tool
 	tool = meld
+
 	# P4Merge
 	#tool = p4merge
+
 	# OSX XCode
 	#tool = opendiff
 
@@ -105,7 +99,7 @@
       #postBuffer = 524288000
 
 [push]
-  # Limit Pushes to Current Branch
+  # Limit Pushes to Current Branch(Git2 Default)
 	default = simple
 
 [branch]
@@ -115,4 +109,3 @@
 [difftool "p4merge"]
 	# P4Merge for OSX
 	#cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
-

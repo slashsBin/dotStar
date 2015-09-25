@@ -3,8 +3,18 @@ dotStar
 
 /sBin/.*: My dotFiles &amp; etc
 
+Single Item
+-----------
+Use cURL to get a Single Item from Repo:
+
+    ```bash
+    curl -L https://github.com/slashsBin/dotStar/raw/master/<path>
+    ```
+
 Installation
 ------------
+(NOTE) `install.star` Script is NO longer maintained, but it should work anyway as the general idea of installing these files are followed by the script.
+
 1. Clone this Repository
 
     ```bash
@@ -19,7 +29,7 @@ Installation
     ```bash
     $ source ./install.star
     ```
-    
+
     This Script will:
     Make sure your dotStar Files are UpToDate,
     Creates a Symbolic-Link to your files in your Home `~/dotStar`,
@@ -34,30 +44,21 @@ Installation
 
 6. Enjoy!
 
-Index
------
-* `.bash_aliases` Bash Aliases, Use `alias` Command to List them
-* `.bash_profile` Bash Profile
-* `.bashrc` Bash RC
-* `.curlrc` cURL Command Options
-* `.exports` ENV Exports
-* `.functions` Bash Functions
-* `.gitignore` Git Exclude Files List
-* `.gitconfig` Git Configurations
-* `.vimrc` ViM Text Editor Options
-
-* `install.star` Automatic Installer/Updater Script
-
 You Should Know
 ---------------
-These `.*` files were written ASSUMING you are Using `Ubuntu` as your distribution!
-which means All Other Prefered Modifications which where Already Included in `Ubuntu` distribution were Ommited from this Repo!
+These `.*` files were written ASSUMING you are Using `Debian` or 'OSX' as your distributions!
+which means All Other Preferred Modifications which where Already Included in `Debian` or 'OSX' distributions were Omitted from this Repo!.
+
+For `OSX` you should See Commented Sections.
 
 Feedback
 --------
-Suggestions and/or Improvements are [Welcome](https://github.com/slashsBin/dotStar/issues)
+Suggestions and/or Improvements are [Welcome](https://github.com/slashsBin/dotStar/issues).
+
+Credits
+-------
+* Mathias’s dotfiles https://github.com/mathiasbynens/dotfiles
 
 License
 -------
-Same as the Origin of the File Respective Application/Author, All Other Modifications are Free to ReUse/Modify, Use at your Own Risk!. 
-
+Same as the Origin of the File Respective Application/Author, All Other Modifications are Free to ReUse/Modify, Use at your Own Risk!.

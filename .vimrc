@@ -49,7 +49,7 @@ set title
 set showcmd
 
 " Print Margin
-set colorcolumn=80
+set colorcolumn=72
 
 " Keep 4 Scrolls at the End
 set scrolloff=4
@@ -57,20 +57,3 @@ set scrolloff=4
 " More History/Undo Levels
 set history=1000
 set undolevels=1000
-
-" ==== NERDTree ====
-
-" Toggle with ^n
-map <C-n> :NERDTreeToggle<CR>
-
-" Close vim if last window is NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-" ==== NERDTree ====
-
-" ==== AirLine ====
-
-" Show by default
-set laststatus=2
-
-" ==== AirLine ====

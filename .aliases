@@ -5,6 +5,7 @@ alias d="cd ~/Downloads"
 
 # My Real Public IP
 alias ifconfig.me="curl ifconfig.me"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # IO
 alias mkdir='mkdir -vp'
@@ -30,10 +31,29 @@ done
 
 # Colorize Output
 alias grep="/bin/grep --color=auto"
-alias ll="ls --color=auto -laF"
+alias ll="ls --color=auto -laFh"
+
+# Stopwatch
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
+# Mega Update
+alias megaupdate='sudo apt-get update; sudo apt-get upgrade -Vy; sudo apt-get dist-upgrade -Vy; sudo apt-get clean; apm update --no-confirm; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; composer -v self-update; symfony -v self-update; php-cs-fixer -v self-update; phpunit --self-update'
+# OSX:
+#alias megaupdate='sudo softwareupdate -i -a -v; brew update --verbose; brew upgrade --verbose --all; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; composer -v self-update; symfony -v self-update; php-cs-fixer -v self-update; phpunit --self-update'
+
+# View HTTP Traffic
+alias sniff="sudo ngrep -d 'eth0' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i eth0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # MySQL
-# --opt := --add-drop-table --add-locks --create-options --disable-keys --extended-insert --lock-tables --quick --set-charset
+# --opt := --add-drop-table
+#          --add-locks
+#          --create-options
+#          --disable-keys
+#          --extended-insert
+#          --lock-tables
+#          --quick
+#          --set-charset
 # Usage:
 #     Dump:
 #     $ mydump -r dump.sql

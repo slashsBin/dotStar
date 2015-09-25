@@ -1,5 +1,4 @@
-##### Eclipse ####
-
+##### Eclipse
 *.pydevproject
 .project
 .metadata
@@ -7,30 +6,30 @@ local.properties
 .classpath
 .settings/
 .loadpath
-
-# External tool builders
 .externalToolBuilders/
-
-# Locally stored "Eclipse launch configurations"
 *.launch
-
-# PDT-specific
 .buildpath
 
-#### Linux ####
+#### Linux
+*~
+.directory
+*.bak
+*.swp
 *~
 
-# KDE directory preferences
-.directory
+#### OSX
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
 
-#### KDevelop4 / Kate ####
+#### NetBeans
+nbproject/
+
+#### PHPStorm
+.idea/
+
+#### KDevelop4 & Kate
 *.kdev4
 .kdev4/
 *.kate-swp
-
-# Created by https://www.gitignore.io
-
-### OSX ###
-.DS_Store
-._*
-
