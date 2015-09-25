@@ -42,8 +42,8 @@
 	# Set ATOM as Default Editor
 	#editor = "atom --wait"
 
-	# Set ViM as Default Editor
-	#editor = "vim"
+	# Set eMacs as Default Editor
+	editor = "emacs"
 
 	# Compression Level
 	compression = 9

@@ -1,5 +1,5 @@
-# Set Vim as Default Text Editor
-export EDITOR="vim"
+# Set eMacs as Default Text Editor
+export EDITOR="emacs"
 
 # Larger bash history (allow 32^3 entries)
 export HISTSIZE=32768
