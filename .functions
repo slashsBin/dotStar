@@ -22,3 +22,20 @@ function knock() {
 	server=$1
 	for port in $@; do nmap -Pn --host_timeout 201 --max-retries 0 -p $port $server; done
 }
+
+# Install My Kind of Bluez Tools
+function megaInstall() {
+	# HomeBrew
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	#ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+	# Composer
+	curl -sS https://getcomposer.org/installer | php -- --install-dir=~/bin --filename=composer
+	chmod a+x ~/bin/composer
+	composer global install
+	# Symfony Installer
+	curl -LsS http://symfony.com/installer -o ~/bin/symfony
+	chmod a+x ~/bin/symfony
+	# PHPUnit
+	curl -L https://phar.phpunit.de/phpunit.phar -o ~/bin/phpunit
+	chmod a+x ~/bin/phpunit
+}

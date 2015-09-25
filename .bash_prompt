@@ -1,0 +1,30 @@
+# @see https://wiki.archlinux.org/index.php/Color_Bash_Prompt
+
+PROMPT=''
+
+
+# Current Time in 24-hour Format
+PROMPT+='[\t]'
+
+
+# Command History Number
+PROMPT+='[\!]'
+
+
+PROMPT+=' '
+# Username
+PROMPT+='\u'
+PROMPT+='@'
+# Full Hostname
+PROMPT+='\H'
+PROMPT+=': '
+# Current PWD
+PROMPT+='\w'
+
+
+# Current User Effective UID
+PROMPT+='\$ '
+
+
+PS1=${PROMPT}
+export PS1

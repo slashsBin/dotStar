@@ -1,8 +1,10 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
+# Add Composer Vendor to the $PATH
+export PATH="~/.composer/vendor/bin/:$PATH";
 
 # Load dotStar
-for theFile in ~/.{exports,aliases,functions}; do
+for theFile in ~/.{bash_prompt,exports,aliases,functions}; do
 	[ -r "$theFile" ] && [ -f "$theFile" ] && source "$theFile";
 done;
 unset theFile;

@@ -46,8 +46,8 @@ Installation
 
 You Should Know
 ---------------
-These `.*` files were written ASSUMING you are Using `Debian` or 'OSX' as your distributions!
-which means All Other Preferred Modifications which where Already Included in `Debian` or 'OSX' distributions were Omitted from this Repo!.
+These `.*` files were written ASSUMING you are Using `Debian` or `OSX` as your distributions!
+which means All Other Preferred Modifications which where Already Included in `Debian` or `OSX` distributions were Omitted from this Repo!.
 
 For `OSX` you should See Commented Sections.
 

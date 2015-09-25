@@ -30,16 +30,40 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 done
 
 # Colorize Output
-alias grep="/bin/grep --color=auto"
-alias ll="ls --color=auto -laFh"
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+	colorflag="--color"
+else # OS X `ls`
+	colorflag="-G"
+fi
+alias ll="ls -laFh ${colorflag}"
 
 # Stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # Mega Update
-alias megaupdate='sudo apt-get update; sudo apt-get upgrade -Vy; sudo apt-get dist-upgrade -Vy; sudo apt-get clean; apm update --no-confirm; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; composer -v self-update; symfony -v self-update; php-cs-fixer -v self-update; phpunit --self-update'
+__megaUpdate_core="brew update; \
+brew upgrade --verbose --all; \
+brew cleanup; \
+apm update --no-confirm; \
+npm install npm -g; \
+npm update -g; \
+sudo gem update --system; \
+sudo gem update; \
+composer -v self-update; \
+composer -v global update; \
+symfony -v self-update; \
+php-cs-fixer -v self-update; \
+phpunit --self-update; \
+arc upgrade"
+alias megaUpdate="sudo apt-get update; \
+sudo apt-get upgrade -Vy; \
+sudo apt-get dist-upgrade -Vy; \
+sudo apt-get clean; \
+${__megaUpdate_core}"
 # OSX:
-#alias megaupdate='sudo softwareupdate -i -a -v; brew update --verbose; brew upgrade --verbose --all; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; composer -v self-update; symfony -v self-update; php-cs-fixer -v self-update; phpunit --self-update'
+alias megaUpdateX="sudo softwareupdate -i -a -v; \
+${__megaUpdate_core}"
 
 # View HTTP Traffic
 alias sniff="sudo ngrep -d 'eth0' -t '^(GET|POST) ' 'tcp and port 80'"
