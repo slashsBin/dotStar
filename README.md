@@ -7,9 +7,9 @@ Single Item
 -----------
 Use cURL to get a Single Item from Repo:
 
-    ```bash
-    curl -L https://github.com/slashsBin/dotStar/raw/master/<path>
-    ```
+```bash
+curl -L https://github.com/slashsBin/dotStar/raw/master/<path>
+```
 
 Installation
 ------------
