@@ -1,56 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <title>dotStar by slashsBin</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>Dotstar by slashsBin</title>
   </head>
-
   <body>
-    <div id="container">
-      <div class="inner">
+    <div class="wrapper">
+      <header>
+        <h1>dotStar</h1>
+        <p>/sBin/.*: My dotFiles &amp; etc</p>
 
-        <header>
-          <h1>Dotstar</h1>
-          <h2>/sBin/.*: My dotFiles &amp; etc</h2>
-        </header>
+        <p class="view"><a href="https://github.com/slashsBin/dotStar">View the Project on GitHub <small>slashsBin/dotStar</small></a></p>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/slashsBin/dotStar/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/slashsBin/dotStar/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/slashsBin/dotStar" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
 
-        <hr>
-
-        <section id="main_content">
-          <h1>
+        <ul>
+          <li><a href="https://github.com/slashsBin/dotStar/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/slashsBin/dotStar/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/slashsBin/dotStar">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
 <a id="dotstar" class="anchor" href="#dotstar" aria-hidden="true"><span class="octicon octicon-link"></span></a>dotStar</h1>
 
 <p>/sBin/.*: My dotFiles &amp; etc</p>
 
 <h2>
+<a id="single-item" class="anchor" href="#single-item" aria-hidden="true"><span class="octicon octicon-link"></span></a>Single Item</h2>
+
+<p>Use cURL to get a Single Item from Repo:</p>
+
+<pre><code>```bash
+curl -L https://github.com/slashsBin/dotStar/raw/master/&lt;path&gt;
+```
+</code></pre>
+
+<h2>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>(NOTE) <code>install.star</code> Script is NO longer maintained, but it should work anyway as the general idea of installing these files are followed by the script.</p>
 
 <ol>
 <li>
 <p>Clone this Repository</p>
 
-<div class="highlight highlight-bash"><pre>$ <span class="pl-c1">cd</span> /path/to/wherever/you/want/
+<div class="highlight highlight-source-shell"><pre>$ <span class="pl-c1">cd</span> /path/to/wherever/you/want/
 $ git clone https://github.com/slashsBin/dotStar.git</pre></div>
 </li>
 <li><p>Customize the dotStar Files to your Own liking</p></li>
 <li>
 <p>Run Install/Updater Script</p>
 
-<div class="highlight highlight-bash"><pre>$ <span class="pl-c1">source</span> ./install.star</pre></div>
+<div class="highlight highlight-source-shell"><pre>$ <span class="pl-c1">source</span> ./install.star</pre></div>
 
 <p>This Script will:
 Make sure your dotStar Files are UpToDate,
@@ -66,53 +75,37 @@ I Recommand making Symbolic-Links to <code>~/dotStar</code> for Files which do N
 </ol>
 
 <h2>
-<a id="index" class="anchor" href="#index" aria-hidden="true"><span class="octicon octicon-link"></span></a>Index</h2>
-
-<ul>
-<li>
-<code>.bash_aliases</code> Bash Aliases, Use <code>alias</code> Command to List them</li>
-<li>
-<code>.bash_profile</code> Bash Profile</li>
-<li>
-<code>.bashrc</code> Bash RC</li>
-<li>
-<code>.curlrc</code> cURL Command Options</li>
-<li>
-<code>.exports</code> ENV Exports</li>
-<li>
-<code>.functions</code> Bash Functions</li>
-<li>
-<code>.gitignore</code> Git Exclude Files List</li>
-<li>
-<code>.gitconfig</code> Git Configurations</li>
-<li><p><code>.vimrc</code> ViM Text Editor Options</p></li>
-<li><p><code>install.star</code> Automatic Installer/Updater Script</p></li>
-</ul>
-
-<h2>
 <a id="you-should-know" class="anchor" href="#you-should-know" aria-hidden="true"><span class="octicon octicon-link"></span></a>You Should Know</h2>
 
-<p>These <code>.*</code> files were written ASSUMING you are Using <code>Ubuntu</code> as your distribution!
-which means All Other Prefered Modifications which where Already Included in <code>Ubuntu</code> distribution were Ommited from this Repo!</p>
+<p>These <code>.*</code> files were written ASSUMING you are Using <code>Debian</code> or 'OSX' as your distributions!
+which means All Other Preferred Modifications which where Already Included in <code>Debian</code> or 'OSX' distributions were Omitted from this Repo!.</p>
+
+<p>For <code>OSX</code> you should See Commented Sections.</p>
 
 <h2>
 <a id="feedback" class="anchor" href="#feedback" aria-hidden="true"><span class="octicon octicon-link"></span></a>Feedback</h2>
 
-<p>Suggestions and/or Improvements are <a href="https://github.com/slashsBin/dotStar/issues">Welcome</a></p>
+<p>Suggestions and/or Improvements are <a href="https://github.com/slashsBin/dotStar/issues">Welcome</a>.</p>
+
+<h2>
+<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credits</h2>
+
+<ul>
+<li>Mathias’s dotfiles <a href="https://github.com/mathiasbynens/dotfiles">https://github.com/mathiasbynens/dotfiles</a>
+</li>
+</ul>
 
 <h2>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
 
-<p>Same as the Origin of the File Respective Application/Author, All Other Modifications are Free to ReUse/Modify, Use at your Own Risk!. </p>
-        </section>
-
-        <footer>
-          Dotstar is maintained by <a href="https://github.com/slashsBin">slashsBin</a><br>
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
+<p>Same as the Origin of the File Respective Application/Author, All Other Modifications are Free to ReUse/Modify, Use at your Own Risk!.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/slashsBin">slashsBin</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
   </body>
 </html>
