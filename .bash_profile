@@ -1,7 +1,9 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 # Add Composer Vendor to the $PATH
-export PATH="~/.composer/vendor/bin/:$PATH";
+export PATH="~/.composer/vendor/bin:$PATH";
+# Add Local /sbin to the $PATH
+export PATH="/usr/local/sbin:$PATH";
 
 # Load dotStar
 for theFile in ~/.{bash_prompt,exports,aliases,functions}; do
