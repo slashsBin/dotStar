@@ -65,10 +65,6 @@ ${__megaUpdate_core}"
 alias megaUpdateX="sudo softwareupdate -i -a -v; \
 ${__megaUpdate_core}"
 
-# View HTTP Traffic
-alias sniff="sudo ngrep -d 'eth0' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i eth0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
-
 # MySQL
 # --opt := --add-drop-table
 #          --add-locks

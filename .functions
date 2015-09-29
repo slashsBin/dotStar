@@ -23,6 +23,14 @@ function knock() {
 	for port in $@; do nmap -Pn --host_timeout 201 --max-retries 0 -p $port $server; done
 }
 
+# View HTTP Traffic
+function sniff() {
+	 sudo ngrep -d $1 -t '^(GET|POST) ' 'tcp and port 80';
+}
+function httpdump() {
+	 sudo tcpdump -i $1 -n -s 0 -w - | grep -a -o -E "Host: .*|GET /.*";
+}
+
 # Install My Kind of Bluez Tools
 function megaInstall() {
 	# HomeBrew
