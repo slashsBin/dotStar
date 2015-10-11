@@ -48,3 +48,9 @@ nbproject/
 *.kdev4
 .kdev4/
 *.kate-swp
+
+#### Emacs
+\#*\#
+auto-save-list
+.\#*
+
