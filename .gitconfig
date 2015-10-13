@@ -43,7 +43,7 @@
 	#editor = "atom --wait"
 
 	# Set eMacs as Default Editor
-	editor = "emacs"
+	editor = "emacs -mm"
 
 	# Compression Level
 	compression = 9
