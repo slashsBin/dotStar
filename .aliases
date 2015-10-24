@@ -82,3 +82,6 @@ ${__megaUpdate_core}"
 alias mydump="mysqldump --all-databases --lock-all-tables --opt --complete-insert --skip-extended-insert"
 alias mydumpdata="mydump --no-create-info"
 alias mydumpschema="mydump --no-data"
+
+# Symfony
+alias sf="app/console"
