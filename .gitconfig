@@ -99,13 +99,23 @@
       #postBuffer = 524288000
 
 [push]
-  # Limit Pushes to Current Branch(Git2 Default)
+	# Limit Pushes to Current Branch(Git2 Default)
 	default = simple
 
 [branch]
-  # Fetch & ReBase, not Merge
-  autosetuprebase = always
+	# Fetch & ReBase, not Merge
+	autosetuprebase = always
 
 [difftool "p4merge"]
 	# P4Merge for OSX
 	#cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
+
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+
+[gui]
+	fontdiff = -family Monoid -size 14 -weight normal -slant roman -underline 0 -overstrike 0
+	diffcontext = 10
+	tabsize = 4
