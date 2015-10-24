@@ -1,0 +1,6 @@
+\set PROMPT1 '%n@%M:%> {%/}%#'
+\pset null '[null]'
+\set COMP_KEYWORD_CASE upper
+\set HISTSIZE 2000
+\x auto
+\set VERBOSITY verbose
