@@ -47,3 +47,8 @@ function megaInstall() {
 	curl -L https://phar.phpunit.de/phpunit.phar -o ~/bin/phpunit
 	chmod a+x ~/bin/phpunit
 }
+
+# Dash Documents
+function dash() {
+    open dash://$1
+}
