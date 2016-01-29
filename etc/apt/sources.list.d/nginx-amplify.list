@@ -1,0 +1,4 @@
+# NginX Amplify
+# Repo Key: http://nginx.org/keys/nginx_signing.key
+
+deb http://packages.amplify.nginx.com/debian/ jessie amplify-agent
