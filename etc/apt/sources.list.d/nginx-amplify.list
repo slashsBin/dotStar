@@ -1,4 +1,6 @@
 # NginX Amplify
-# Repo Key: http://nginx.org/keys/nginx_signing.key
+#
+# GPG Key:
+# $ curl -sL http://nginx.org/keys/nginx_signing.key | sudo apt-key add -
 
 deb http://packages.amplify.nginx.com/debian/ jessie amplify-agent

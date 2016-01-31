@@ -7,9 +7,9 @@
 #
 # GPG Key:
 # http://downloads.linux.hp.com/SDR/keys.html
-# $ curl http://downloads.linux.hp.com/SDR/hpPublicKey1024.pub | apt-key add -
-# $ curl http://downloads.linux.hp.com/SDR/hpPublicKey2048.pub | apt-key add -
-# $ curl http://downloads.linux.hp.com/SDR/hpPublicKey2048_key1.pub | apt-key add -
+# $ curl -sL http://downloads.linux.hp.com/SDR/hpPublicKey1024.pub | sudo apt-key add -
+# $ curl -sL http://downloads.linux.hp.com/SDR/hpPublicKey2048.pub | sudo apt-key add -
+# $ curl -sL http://downloads.linux.hp.com/SDR/hpPublicKey2048_key1.pub | sudo apt-key add -
 
 # HP Management Component Pack for ProLiant
 # http://downloads.linux.hp.com/SDR/project/mcp/

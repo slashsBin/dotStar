@@ -1,7 +1,7 @@
 # OPSWAT Gears
 #
 # GPG Key:
-# $ curl -L http://software.opswat.com/gears-linux/key/gears-public.key | sudo apt-key add -
+# $ curl -sL http://software.opswat.com/gears-linux/key/gears-public.key | sudo apt-key add -
 #
 # Connect to Cloud
 # $ systemctl stop gearsd

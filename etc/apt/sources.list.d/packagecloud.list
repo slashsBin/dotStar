@@ -1,6 +1,7 @@
 # PackageCloud.IO
 #
-# GPG: curl https://packagecloud.io/gpg.key | apt-key add -
+# GPG Key:
+# $ curl -sL https://packagecloud.io/gpg.key | sudo apt-key add -
 
 # MyCLI: MySQL/PostgreSQL AutoComplete & Syntax Highlight
 deb https://packagecloud.io/amjith/mycli/debian/ jessie main

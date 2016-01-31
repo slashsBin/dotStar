@@ -1,5 +1,7 @@
 # NginX
-# Repo Key: http://nginx.org/keys/nginx_signing.key
+#
+# GPG Key:
+# $ curl -sL http://nginx.org/keys/nginx_signing.key | sudo apt-key add -
 
 deb http://nginx.org/packages/debian/ jessie nginx
 deb-src http://nginx.org/packages/debian/ jessie nginx

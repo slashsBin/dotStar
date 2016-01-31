@@ -1,6 +1,6 @@
 # PostgreSQL Global Development Group
 #
 # GPG Key:
-# $ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+# $ curl -sL https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 
 deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main

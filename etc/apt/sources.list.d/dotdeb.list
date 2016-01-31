@@ -1,8 +1,7 @@
 # DotDeb.org
 #
-# GnuPG Key:
-#     wget http://www.dotdeb.org/dotdeb.gpg
-#     sudo apt-key add dotdeb.gpg
+# GPG Key:
+# $ curl -sL http://www.dotdeb.org/dotdeb.gpg | sudo apt-key add -
 
 # Main Repo
 deb http://packages.dotdeb.org jessie all

@@ -1,3 +1,11 @@
-# SensioLabs Symfony Desktop Client
+# SensioLabs
 
+# Symfony Desktop Client
 deb http://linux.desktop.sensiolabs.org/debian jessie main
+
+# BlackFire
+#
+# GPG Key:
+# $ curl -sL https://packagecloud.io/gpg.key | sudo apt-key add -
+deb http://packages.blackfire.io/debian any main
+

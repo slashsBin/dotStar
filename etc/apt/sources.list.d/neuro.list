@@ -1,6 +1,7 @@
 # NeuroDebian
 #
-# sudo apt-key adv --recv-keys --keyserver hkp://pgp.mit.edu:80 0xA5D32F012649A5A9
+# GPG Key:
+# $ sudo apt-key adv --recv-keys --keyserver hkp://pgp.mit.edu:80 0xA5D32F012649A5A9
 
 deb http://neurodeb.pirsquared.org data main contrib non-free
 #deb-src http://neurodeb.pirsquared.org data main contrib non-free

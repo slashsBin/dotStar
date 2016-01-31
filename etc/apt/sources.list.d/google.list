@@ -1,5 +1,10 @@
 # Google Linux Repo
+# https://www.google.com/linuxrepositories/
+#
+# GPG Key:
+# $ curl -sL https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 
 deb http://dl.google.com/linux/chrome/deb/ stable main
 deb http://dl.google.com/linux/earth/deb/ stable main
 deb http://dl.google.com/linux/talkplugin/deb/ stable main
+deb http://dl.google.com/linux/webdesigner/deb/ stable main

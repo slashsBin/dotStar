@@ -1,6 +1,6 @@
 # Oracle VirtualBox
 #
-# APT Key:
-# $ wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+# GPG Key:
+# $ curl -sL https://www.virtualbox.org/download/oracle_vbox.asc | sudo apt-key add -
 
 deb http://download.virtualbox.org/virtualbox/debian jessie contrib

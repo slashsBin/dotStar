@@ -1,7 +1,7 @@
 # Webmin
 #
-# GPG:
-# $ curl -L http://www.webmin.com/jcameron-key.asc | sudo apt-key add -
+# GPG Key:
+# $ curl -sL http://www.webmin.com/jcameron-key.asc | sudo apt-key add -
 
 deb http://download.webmin.com/download/repository sarge contrib
 deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib

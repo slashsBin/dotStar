@@ -1,7 +1,7 @@
 # SysDig
 #
-# Repo Key:
-# curl -s https://s3.amazonaws.com/download.draios.com/DRAIOS-GPG-KEY.public | apt-key add -
+# GPG Key:
+# curl -sL https://s3.amazonaws.com/download.draios.com/DRAIOS-GPG-KEY.public | sudo apt-key add -
 #
 # Kernel Headers
 # apt-get -y install linux-headers-$(uname -r)

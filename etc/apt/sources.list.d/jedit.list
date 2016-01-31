@@ -1,5 +1,6 @@
 # jEdit
 #
-# apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E6A233DBE3AFBEFC
+# GPG Key:
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E6A233DBE3AFBEFC
 
 deb http://kent.dl.sourceforge.net/project/jedit /
