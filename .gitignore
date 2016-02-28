@@ -28,20 +28,12 @@ cscope.po.out
 *~
 .directory
 *.bak
-*.swp
 *~
 
 #### OSX
-.DS_Store
 ._*
 .AppleDouble
 .LSOverride
-
-#### NetBeans
-nbproject/
-
-#### PHPStorm
-.idea/
 
 #### KDevelop4 & Kate
 *.kdev4

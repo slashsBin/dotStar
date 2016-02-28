@@ -1,6 +1,7 @@
 {
-    "name": "/sBin/.*",
+    "name": "slashsbin/dotstar",
     "license": "MIT",
+    "description": "My dotFiles & etc",
     "require": {
         "psecio/iniscan": "^3.6",
         "psecio/parse": "^0.6.0",
