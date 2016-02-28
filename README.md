@@ -1,6 +1,7 @@
 dotStar
 =======
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/64999a54-93a9-4532-99c9-53901e93b5c9/mini.png)](https://insight.sensiolabs.com/projects/64999a54-93a9-4532-99c9-53901e93b5c9)
 /sBin/.*: My dotFiles &amp; etc
 
 Single Item
