@@ -43,13 +43,9 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date
 
 # Mega Update
 __megaUpdate_core="brew update; \
-brew upgrade --verbose --all; \
+brew upgrade; \
 brew cleanup; \
 apm update --no-confirm; \
-npm install npm -g; \
-npm update -g; \
-sudo gem update --system; \
-sudo gem update; \
 composer -v self-update; \
 composer -v global update; \
 symfony -v self-update; \
@@ -60,9 +56,17 @@ alias megaUpdate="sudo apt-get update; \
 sudo apt-get upgrade -Vy; \
 sudo apt-get dist-upgrade -Vy; \
 sudo apt-get clean; \
+sudo gem update --system; \
+sudo gem update; \
+sudo npm install npm -g; \
+sudo npm update -g; \
 ${__megaUpdate_core}"
 # OSX:
 alias megaUpdateX="sudo softwareupdate -i -a -v; \
+gem update --system; \
+gem update; \
+npm install npm -g; \
+npm update -g; \
 ${__megaUpdate_core}"
 
 # MySQL
