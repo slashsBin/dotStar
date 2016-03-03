@@ -1,0 +1,11 @@
+{
+  "config": {
+    "prestissimo": {
+      "maxConnections": 8,
+      "minConnections": 4,
+      "pipeline": false,
+      "verbose": false,
+      "insecure": false
+    }
+  }
+}

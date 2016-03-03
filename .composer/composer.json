@@ -1,0 +1,12 @@
+{
+  "name": "slashsbin/dotstar",
+  "license": "MIT",
+  "description": "My dotFiles & etc",
+  "require": {
+    "psecio/iniscan": "^3.6",
+    "psecio/parse": "^0.6.0",
+    "psecio/versionscan": "^1.5",
+    "pyrech/composer-changelogs": "^1.3",
+    "hirak/prestissimo": "^0.1"
+  }
+}
