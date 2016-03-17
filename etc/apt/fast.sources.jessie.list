@@ -1,0 +1,21 @@
+# See: http://httpredir.debian.org/
+# See: https://www.debian.org/mirror/
+
+# Base repository
+deb http://httpredir.debian.org/debian jessie main contrib non-free
+deb-src http://httpredir.debian.org/debian jessie main contrib non-free
+
+# Stable updates
+deb http://httpredir.debian.org/debian jessie-updates main contrib non-free
+deb-src http://httpredir.debian.org/debian jessie-updates main contrib non-free
+
+# Stable backports
+deb http://httpredir.debian.org/debian jessie-backports main contrib non-free
+deb-src http://httpredir.debian.org/debian jessie-backports main contrib non-free
+
+# Security updates
+deb http://security.debian.org/ jessie/updates main contrib non-free
+deb-src http://security.debian.org/ jessie/updates main contrib non-free
+
+# Proposed additions for point release
+deb http://httpredir.debian.org/debian jessie-proposed-updates main contrib non-free
