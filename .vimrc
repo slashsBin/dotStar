@@ -15,6 +15,12 @@ set encoding=utf-8
 "	set undodir=~/.vim/undo
 "endif
 
+" Use :help 'option' to see the documentation for the given option.
+set autoindent
+set backspace=indent,eol,start
+set complete-=i
+set smarttab
+
 " Syntax Highlighting
 syntax on
 

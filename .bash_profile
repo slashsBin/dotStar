@@ -13,11 +13,16 @@ unset theFile;
 
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend;
+# Enable history expansion with space
+# E.g. typing !!<space> will replace the !! with your last command
+bind Space:magic-space
+# Save multi-line commands as one command
+shopt -s cmdhist
 
 # Enable some Bash 4 features when possible:
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
 # * Recursive globbing, e.g. `echo **/*.txt`
-for option in autocd globstar; do
+for option in autocd globstar noclobber checkwinsize; do
 	shopt -s "$option" 2> /dev/null;
 done;
 
