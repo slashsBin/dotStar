@@ -15,9 +15,6 @@ alias mv='mv -v'
 # Git
 alias g="git"
 
-# ViM
-alias v="vim"
-
 # Enable aliases to be sudo'ed
 alias sudo="sudo "
 
@@ -30,6 +27,8 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 done
 
 # Colorize Output
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
@@ -88,4 +87,4 @@ alias mydumpdata="mydump --no-create-info"
 alias mydumpschema="mydump --no-data"
 
 # Symfony
-alias sf="app/console"
+alias sf="bin/console"

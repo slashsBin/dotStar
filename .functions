@@ -52,3 +52,8 @@ function megaInstall() {
 function dash() {
     open dash://$1
 }
+
+# Mirrors SpeedTest
+function mirrorSelect() {
+    cat $1 | xargs -n1 -I {} sh -c 'echo `curl -r 0-102400 -s -w %{speed_download} -o /dev/null {}` {}' | sort -g -r | head -1 | awk '{ print $2  }'
+}
