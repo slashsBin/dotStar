@@ -10,9 +10,11 @@
 	b = branch -av
 
 	# Log
-	l = log --pretty=oneline -n 20 --graph --abbrev-commit
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	l = log -n20 --graph --oneline --abbrev-commit
+	lol = log --all --graph --decorate --oneline --abbrev-commit
+	lols = log --all --graph --decorate --oneline --simplify-by-decoration
 	last = log -1 HEAD
+	contributors = shortlog -sne
 
 	# List
 	ls = ls-files
