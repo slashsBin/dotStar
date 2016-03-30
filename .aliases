@@ -88,3 +88,6 @@ alias mydumpschema="mydump --no-data"
 
 # Symfony
 alias sf="bin/console"
+
+# Grep Content w/o Comment Lines
+alias cgrep="grep -Ev '^#'"
