@@ -1,0 +1,7 @@
+# Elastic Search
+#
+# GPG Key:
+# $ curl -sL https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+
+# 2.x
+deb http://packages.elastic.co/elasticsearch/2.x/debian stable main
