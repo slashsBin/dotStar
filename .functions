@@ -107,8 +107,19 @@ function openconnect() {
     echo $2 | sudo openconnect -u $1 --no-cert-check -d --timestamp -v --passwd-on-stdin $3
 }
 
-# Symfony Live Reload for OSX
+# Symfony Watch for Changes
 # Watch for FS Updated Events in Current Directory
+# Requirements: https://github.com/emcrisostomo/fswatch
+function sfWatch() {
+    fswatch -txr --event Updated -e '**' -i 'app/' -i 'src/' . | tee /dev/stderr
+}
+
+# Symfony Live Reload for OSX
 function sfLiveReloadX() {
-    fswatch -txr --event Updated -e '**' -i 'app/' -i 'src/' . | tee /dev/stderr | xargs -n1 osascript ~/bin/reloadChrome.applescript
+    sfWatch | xargs -n1 osascript ~/bin/reloadChrome.applescript
+}
+
+# Symfony Live Reload for *NIX
+function sfLiveReload() {
+    sfWatch | xargs -n1 ~/bin/reloadChrome.sh
 }
