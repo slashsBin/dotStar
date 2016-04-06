@@ -1,10 +1,10 @@
 [Protocol]
-exec=/usr/bin/atom -- %u
-protocol=atom
+exec=/usr/local/bin/pstorm "%u"
+protocol=editor
 input=none
 output=none
 helper=true
-listing=false
+listing=
 reading=false
 writing=false
 makedir=false

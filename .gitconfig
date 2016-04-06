@@ -106,7 +106,7 @@
 
 [branch]
 	# Fetch & ReBase, not Merge
-	autosetuprebase = always
+	#autosetuprebase = always
 
 [difftool "p4merge"]
 	# P4Merge for OSX
