@@ -1,6 +1,8 @@
 [user]
 	name = Mohammad Shokri
 	email = shokri.md@gmail.com
+	userConfigOnly = true
+	signingkey = C532627E
 
 [alias]
 	# Status
@@ -55,6 +57,9 @@
 
 	# Linux/Mac Compatible Line Endings
 	autocrlf = input
+
+[commit]
+	gpgSign = true
 
 [color]
 	# Colorize Output when Possible
