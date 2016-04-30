@@ -111,7 +111,7 @@ function openconnect() {
 # Watch for FS Updated Events in Current Directory
 # Requirements: https://github.com/emcrisostomo/fswatch
 function sfWatch() {
-    fswatch -txr --event Updated -e '**' -i 'app/' -i 'src/' . | tee /dev/stderr
+    fswatch -txr -l 0.5 --event Updated -e '**' -i 'app/' -i 'src/' . | tee /dev/stderr
 }
 
 # Symfony Live Reload for OSX
