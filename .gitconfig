@@ -21,20 +21,24 @@
 	# List
 	ls = ls-files
 
-	# Show files ignored by git:
-	ign = ls-files -o -i --exclude-standard
-
 	# Tags
 	t = tag -l
 
 	# Remotes
 	r = remote -v
 
-	# Stage
+	# UnStage/Revert
 	unstage = reset HEAD --
+	discard = checkout --
+	uncommit = reset --mixed HEAD~
+	amend = commit --amend
+	nevermind = !git reset --hard HEAD & git clean -d -f
 
 	# SubModules
 	pushall = push --recurse-submodules=on-demand
+
+    # Show files ignored by git:
+	ignored = ls-files -o -i --exclude-standard
 
 	# GitIgnore.IO
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
