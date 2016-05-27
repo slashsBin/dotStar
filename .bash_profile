@@ -5,6 +5,11 @@ export PATH="~/.composer/vendor/bin:$PATH";
 # Add Local /sbin to the $PATH
 export PATH="/usr/local/sbin:$PATH";
 
+# Bash Brew Completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
 # Load dotStar
 for theFile in ~/.{bash_prompt,exports,aliases,functions}; do
 	[ -r "$theFile" ] && [ -f "$theFile" ] && source "$theFile";
