@@ -32,63 +32,136 @@ function httpdump() {
 }
 
 # Install My Kind of Bluez Tools
-function __megaInstall_core() {
-    cd
-
-	# HomeBrew
-	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	#ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
-	# Composer
-	curl -sS https://getcomposer.org/installer | php -- --install-dir=~/bin --filename=composer
-	chmod a+x ~/bin/composer
-	composer global install
-	# Symfony Installer
-	curl -LsS http://symfony.com/installer -o ~/bin/symfony
-	chmod a+x ~/bin/symfony
-	# Symfony CS
-	curl http://get.sensiolabs.org/php-cs-fixer.phar -o ~/bin/php-cs-fixer
-	chmod a+x ~/bin/php-cs-fixer
-	# PHPUnit
-	curl -L https://phar.phpunit.de/phpunit.phar -o ~/bin/phpunit
-	chmod a+x ~/bin/phpunit
-	# PHPLoC
-	curl -L https://phar.phpunit.de/phploc.phar -o ~/bin/phploc
-	chmod a+x ~/bin/phploc
-	# Arcanist
-	mkdir -p ~/opt/phacility/
-	cd ~/opt/phacility/
-	git clone https://github.com/phacility/libphutil.git
-	git clone https://github.com/phacility/arcanist.git
-	cd ~/bin/
-	ln -s ~/opt/phacility/arcanist/bin/arc
-	cd
-	# Vint
-	pip install vim-vint
-	# PHPMD
-	curl -L http://static.phpmd.org/php/latest/phpmd.phar -o ~/bin/phpmd
-	chmod a+x ~/bin/phpmd
-	# PHPCS
-	curl -L https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar -o ~/bin/phpcs
-	chmod a+x ~/bin/phpcs
-	# CSSLint
-	npm install -g csslint
-	# SCSS-Lint
-	gem install scss_lint
-	# MarkdownLint
-	gem install mdl
-	# JSHint
-	npm install -g jshint
-}
-
 function megaInstall() {
-    __megaInstall_core
-    sudo apt-get install -Vy shellcheck
-    sudo apt-get install -Vy lintian
+    mkdir -p ~/var/tmp/
+    mkdir ~/bin/
+    mkdir ~/opt/
+
+    cd ~/var/tmp/
+    case $1 in
+        'core')
+            if [ `uname` == 'Darwin' ]; then
+	            ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+            else
+	            ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+            fi
+            ;;
+        'tools')
+            # Composer
+            curl -sS https://getcomposer.org/installer | php -- --install-dir=~/bin --filename=composer
+            chmod a+x ~/bin/composer
+            composer global install
+
+            # Symfony Installer
+            curl -LsS http://symfony.com/installer -o ~/bin/symfony
+            chmod a+x ~/bin/symfony
+
+            # Symfony CS
+            curl http://get.sensiolabs.org/php-cs-fixer.phar -o ~/bin/php-cs-fixer
+            chmod a+x ~/bin/php-cs-fixer
+
+            # PHPUnit
+            curl -L https://phar.phpunit.de/phpunit.phar -o ~/bin/phpunit
+            chmod a+x ~/bin/phpunit
+
+            # PHPLoC
+            curl -L https://phar.phpunit.de/phploc.phar -o ~/bin/phploc
+            chmod a+x ~/bin/phploc
+
+            # Arcanist
+            mkdir -p ~/opt/phacility/
+            cd ~/opt/phacility/
+            git clone https://github.com/phacility/libphutil.git
+            git clone https://github.com/phacility/arcanist.git
+            cd ~/bin/
+            ln -s ~/opt/phacility/arcanist/bin/arc
+            cd ~/var/tmp/
+            ;;
+        'linters')
+            if [ `uname` == 'Darwin' ]; then
+                brew install shellcheck
+            else
+                sudo apt-get install -Vy shellcheck
+                sudo apt-get install -Vy lintian
+            fi
+
+            # Vint
+            pip install vim-vint
+
+            # PHPMD
+            curl -L http://static.phpmd.org/php/latest/phpmd.phar -o ~/bin/phpmd
+            chmod a+x ~/bin/phpmd
+
+            # PHPCS
+            curl -L https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar -o ~/bin/phpcs
+            chmod a+x ~/bin/phpcs
+
+            # CSSLint
+            npm install -g csslint
+
+            # SCSS-Lint
+            gem install scss_lint
+
+            # MarkdownLint
+            gem install mdl
+
+            # JSHint
+            npm install -g jshint
+            ;;
+        'all')
+            megaInstall core
+            megaInstall tools
+            megaInstall linters
+            ;;
+        *)
+            megaInstall tools
+            ;;
+    esac
 }
 
-function megaInstallX() {
-    __megaInstall_core
-    brew install shellcheck
+# Update My Toolz
+function megaUpdate() {
+    case $1 in
+        'core')
+            if [ `uname` == 'Darwin' ]; then
+                sudo softwareupdate -i -a -v
+                gem update --system
+                gem update --system
+                gem update
+                npm install npm -g
+                npm update -g
+            else
+                sudo apt-get update
+                sudo apt-get upgrade -Vy
+                sudo apt-get dist-upgrade -Vy
+                sudo apt-get clean
+                sudo gem update --system
+                sudo gem update
+                sudo npm install npm -g
+                sudo npm update -g
+            fi
+            brew update
+            brew upgrade
+            brew cleanup
+            ;;
+        'tools')
+            apm update --no-confirm
+            composer -v self-update
+            composer -v global update
+            symfony -v self-update
+            php-cs-fixer -v self-update
+            phpunit --self-update
+            arc upgrade
+            spress -v self-update
+            ;;
+        'all')
+            megaUpdate core
+            megaUpdate tools
+            ;;
+        *)
+            megaUpdate tools
+            ;;
+    esac
 }
 
 # Dash Documents
@@ -125,7 +198,7 @@ function sfLiveReload() {
 }
 
 # Dynamic Alias Creation
-aliasAdd() {
+function aliasAdd() {
     local last_command=$(echo `history | tail -n2 | head -n1` | sed 's/[0-9]* //')
     echo alias $1="'""$last_command""'" >> ~/.aliases
     source ~/.bash_profile
