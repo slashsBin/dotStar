@@ -41,6 +41,7 @@ alias ll="ls -laFh ${colorflag}"
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # MySQL
+#
 # --opt := --add-drop-table
 #          --add-locks
 #          --create-options
@@ -49,17 +50,25 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date
 #          --lock-tables
 #          --quick
 #          --set-charset
+alias myDump="mysqldump --lock-all-tables --opt --complete-insert --skip-extended-insert"
+# MyDumpAll: Single File
 # Usage:
 #     Dump:
-#     $ mydump -r dump.sql
+#     $ myDumpAll -r dump.sql
 #     Restore:
-#     $ mysql --binary-mode --force databaseName < dump.sql
-alias mydump="mysqldump --all-databases --lock-all-tables --opt --complete-insert --skip-extended-insert"
-alias mydumpdata="mydump --no-create-info"
-alias mydumpschema="mydump --no-data"
+#     $ myRestoreAll < dump.sql
+alias myDumpAll="mydump --all-databases"
+alias myDumpAllData="mydump --no-create-info"
+alias myDumpAllSchema="mydump --no-data"
+alias myRestoreAll="mysql --binary-mode --force"
+# MyD-u-m-pAll: Separate Files
+alias myD-u-m-pAll="$ mysql -N -e 'show databases' | while read dbname; do mydump "$dbname" > "$dbname".sql; done"
+alias myR-e-s-t-o-r-eAll="$ for sql in *.sql; do dbname=${sql/\.sql/}; echo -n "Now importing $dbname ... "; mysql $dbname < $sql; echo " done."; done"
 
 # Symfony
 alias sf="bin/console"
 
 # Grep Content w/o Comment Lines
 alias cgrep="grep -Ev '^#'"
+# Case-Insensitive Grep
+alias igrep="grep -i"
