@@ -62,8 +62,8 @@ alias myDumpAllData="mydump --no-create-info"
 alias myDumpAllSchema="mydump --no-data"
 alias myRestoreAll="mysql --binary-mode --force"
 # MyD-u-m-pAll: Separate Files
-alias myD-u-m-pAll="$ mysql -N -e 'show databases' | while read dbname; do mydump "$dbname" > "$dbname".sql; done"
-alias myR-e-s-t-o-r-eAll="$ for sql in *.sql; do dbname=${sql/\.sql/}; echo -n "Now importing $dbname ... "; mysql $dbname < $sql; echo " done."; done"
+alias myD-u-m-pAll='$ mysql -N -e "show databases" | while read dbname; do mydump "$dbname" > "$dbname".sql; done'
+alias myR-e-s-t-o-r-eAll='$ for sql in *.sql; do dbname=${sql/\.sql/}; echo -n "Now importing $dbname ... "; mysql $dbname < $sql; echo " done."; done'
 
 # Symfony
 alias sf="bin/console"
