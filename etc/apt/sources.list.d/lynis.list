@@ -1,0 +1,6 @@
+# Cisofy Lynis
+#
+# GPG Key:
+# curl -sL http://packages.cisofy.com/keys/cisofy-software-public.key | sudo apt-key add -
+
+deb [arch=amd64] http://packages.cisofy.com/community/lynis/deb/ stable main
