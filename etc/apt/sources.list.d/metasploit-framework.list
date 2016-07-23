@@ -1,0 +1,9 @@
+# MetaSploit FrameWork
+#
+# GPG Key:
+# curl -sL http://downloads.metasploit.com/data/releases/metasploit-framework/apt/metasploit-framework.gpg.key | sudo apt-key add -
+
+deb http://downloads.metasploit.com/data/releases/metasploit-framework/apt jessie main
+
+# Nighty Builds
+# deb http://apt.metasploit.com/ jessie main
