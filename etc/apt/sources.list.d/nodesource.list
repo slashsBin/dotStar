@@ -1,7 +1,14 @@
-# NodeJS
+# Node.js
 #
 # GPG Key:
 # curl -sL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
+#
+# Install: sudo apt-get install -Vy nodejs
 
-deb https://deb.nodesource.com/node jessie main
-deb-src https://deb.nodesource.com/node jessie main
+# v4 LTS
+deb https://deb.nodesource.com/node_4.x jessie main
+deb-src https://deb.nodesource.com/node_4.x jessie main
+
+# v6 Current
+#deb https://deb.nodesource.com/node_6.x jessie main
+#deb-src https://deb.nodesource.com/node_6.x jessie main
