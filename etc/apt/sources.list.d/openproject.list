@@ -1,0 +1,6 @@
+# OpenProject
+#
+# GPG Key:
+# curl -sL https://deb.packager.io/key | sudo apt-key add -
+
+deb https://deb.packager.io/gh/opf/openproject-ce jessie stable/6

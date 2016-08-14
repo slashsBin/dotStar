@@ -17,4 +17,4 @@ export PAGER="most"
 export GIT_SSL_NO_VERIFY=true
 
 # Directory Path
-export CDPATH=".:~:~/WorkSpace/:$CDPATH"
+export CDPATH=".:$HOME:$HOME/WorkSpace/:$CDPATH"

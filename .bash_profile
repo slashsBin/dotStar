@@ -1,17 +1,27 @@
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
-# Add Composer Vendor to the $PATH
-export PATH="~/.composer/vendor/bin:$PATH";
 # Add Local /sbin to the $PATH
 export PATH="/usr/local/sbin:$PATH";
 
-# Bash Brew Completion
+# Add Composer Vendor to the $PATH
+export PATH="$HOME/.composer/vendor/bin:$PATH";
+
+# Add `~/bin` to the `$PATH`
+export PATH="$HOME/bin:$PATH";
+
+# LinuxBrew
+if [ -f $(brew --prefix) ]; then
+	export PATH="$PATH:$(brew --prefix)/bin";
+	export PATH="$PATH:$(brew --prefix)/sbin";
+	export MANPATH="$MANPATH:$(brew --prefix)/share/man"
+	export INFOPATH="$INFOPATH:$(brew --prefix)/share/info"
+fi
+
+# Bash LinuxBrew Completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
 # Load dotStar
-for theFile in ~/.{bash_prompt,exports,aliases,functions}; do
+for theFile in $HOME/.{bash_prompt,exports,aliases,functions}; do
 	[ -r "$theFile" ] && [ -f "$theFile" ] && source "$theFile";
 done;
 unset theFile;

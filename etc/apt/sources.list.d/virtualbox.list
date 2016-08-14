@@ -2,5 +2,6 @@
 #
 # GPG Key:
 # $ curl -sL https://www.virtualbox.org/download/oracle_vbox.asc | sudo apt-key add -
+# $ curl -sL https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo apt-key add -
 
 deb http://download.virtualbox.org/virtualbox/debian jessie contrib
