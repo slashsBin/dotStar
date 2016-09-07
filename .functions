@@ -183,7 +183,7 @@ function openconnect() {
 # OpenConnect Proxy
 # Usage: openconnectProxy <USER> <PASSWD> <SERVER> <Socks5Port>
 function openconnectProxy() {
-    echo $2 | sudo openconnect -u $1 --no-cert-check -d --timestamp -v --passwd-on-stdin --script-tun --script "ocproxy -D $4" $3
+    echo $2 | sudo openconnect -u $1 --no-cert-check -d --timestamp -v --passwd-on-stdin --script-tun --script "ocproxy -D $4 -v" $3
 }
 
 # Symfony Watch for Changes
