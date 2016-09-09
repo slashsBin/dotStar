@@ -1,5 +1,6 @@
 # Logging
-Log notice file /var/log/tor/log
+#Log notice file /var/log/tor/log
+Log notice stdout
 
 # ARM
 # sudo -u debian-tor arm
@@ -17,9 +18,17 @@ TransListenAddress 192.168.168.168
 DNSPort 5353
 DNSListenAddress 192.168.168.168
 
-# Bridges & PluggableTransports
+# Pluggable Transports
 # See https://github.com/obfuscation/documentation
-ClientTransportPlugin obfs3 exec /usr/local/bin/obfsproxy managed
-ClientTransportPlugin obfs4 exec /usr/bin/obfs4proxy
-ClientTransportPlugin fte exec /usr/local/bin/fteproxy --managed
+#ClientTransportPlugin obfs2,obfs3,scramblesuit exec /usr/local/bin/obfsproxy managed
+#ClientTransportPlugin obfs4 exec /usr/local/opt/go/libexec/bin/obfs4proxy
+ClientTransportPlugin obfs2,obfs3,obfs4,scramblesuit exec /usr/local/opt/go/libexec/bin/obfs4proxy
+#ClientTransportPlugin fte exec /usr/local/bin/fteproxy --managed
+ClientTransportPlugin meek exec /usr/local/opt/go/libexec/bin/meek-client
+
+# Bridges
 UseBridges 0
+#Bridge meek 0.0.2.0:1 url=https://meek-reflect.appspot.com/ front=www.google.com
+#Bridge meek 0.0.2.0:2 url=https://d2zfqthxsdq309.cloudfront.net/ front=a0.awsstatic.com
+#Bridge meek 0.0.2.0:3 url=https://az668014.vo.msecnd.net/ front=ajax.aspnetcdn.com
+#Bridge meek 0.0.2.0:4 url=https://meek-reflect.herokuapp.com/ front=www.google.com
