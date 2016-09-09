@@ -18,3 +18,12 @@ export GIT_SSL_NO_VERIFY=true
 
 # Directory Path
 export CDPATH=".:$HOME:$HOME/WorkSpace/:$CDPATH"
+
+# HomeBrew
+#export HOMEBREW_VERBOSE=true
+#export HOMEBREW_CURL_VERBOSE=true
+#export HOMEBREW_GITHUB_API_TOKEN=
+
+# Go
+export GOPATH="/usr/local/opt/go/libexec"
+export PATH="$GOPATH/bin:$PATH"

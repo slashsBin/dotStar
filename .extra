@@ -1,11 +1,3 @@
 #!/bin/bash
 #
 # Personal Bash Customizations
-
-# Go
-#export GOPATH="/usr/local/opt/go/libexec"
-#export PATH="$GOPATH/bin:$PATH"
-
-# HomeBrew GitHub API Token
-#export HOMEBREW_GITHUB_API_TOKEN=
-

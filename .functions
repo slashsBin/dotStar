@@ -125,27 +125,31 @@ function megaUpdate() {
         'core')
             if [ `uname` == 'Darwin' ]; then
                 sudo softwareupdate -i -a -v
-                gem update --system
-                gem update --system
-                gem update
+                pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
                 npm install npm -g
                 npm update -g
+                go get -u all
             else
                 sudo apt-get update
                 sudo apt-get upgrade -Vy
                 sudo apt-get dist-upgrade -Vy
                 sudo apt-get clean
-                sudo gem update --system
-                sudo gem update
+                sudo pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip install -U
                 sudo npm install npm -g
                 sudo npm update -g
+                sudo go get -u all
             fi
+            sudo gem update --system
+            sudo gem update
             brew update
             brew upgrade
             brew cleanup
+            brew prune
+            brew cask cleanup
             ;;
         'tools')
             apm update --no-confirm
+            apm upgrade
             composer -v self-update
             composer -v global update
             symfony -v self-update
