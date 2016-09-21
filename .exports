@@ -2,9 +2,10 @@
 export EDITOR="emacs"
 
 # Larger bash history (allow 32^3 entries)
-export HISTSIZE=32768
-export HISTFILESIZE=$HISTSIZE
+export HISTSIZE=-1
+export HISTFILESIZE=-1
 export HISTCONTROL=ignoredups
+export HISTTIMEFORMAT="[%F%t%T]%t"
 
 # Prefer Locale US and Encoding UTF8
 export LANG="en_US.UTF-8"
