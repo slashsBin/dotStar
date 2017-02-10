@@ -1,0 +1,2 @@
+# Download best format available but not better that 480p
+--format 'bestvideo[height<=480]+bestaudio/best[height<=480]'
