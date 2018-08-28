@@ -1,56 +1,56 @@
-dotStar
-=======
+<p align="center">
+  <img src="https://bashlogo.com/img/logo/png/full_colored_dark.png" alt="Bash" height="128">
+</p>
 
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/64999a54-93a9-4532-99c9-53901e93b5c9/mini.png)](https://insight.sensiolabs.com/projects/64999a54-93a9-4532-99c9-53901e93b5c9)
+<p align="center">
+  <a href="https://insight.sensiolabs.com/projects/64999a54-93a9-4532-99c9-53901e93b5c9"><img src="https://insight.sensiolabs.com/projects/64999a54-93a9-4532-99c9-53901e93b5c9/mini.png" alt="SensioLabs Insight"></a>
+</p>
+
+# dotStar
+
 /sBin/.*: My dotFiles &amp; etc
 
-Single Item
------------
+## Single Item
+
 Use cURL to get a Single Item from Repo:
 
 ```bash
 curl -L https://github.com/slashsBin/dotStar/raw/master/<path>
 ```
 
-Installation
-------------
-(NOTE) `install.star` Script is NO longer maintained, but it should work anyway as the general idea of installing these files are followed by the script.
+## Installation - Manual
 
-1. Clone this Repository
+```bash
+# Clone Repo
+git clone https://github.com/slashsBin/dotStar.git ~/workspace/dotStar
 
-    ```bash
-    $ cd /path/to/wherever/you/want/
-    $ git clone https://github.com/slashsBin/dotStar.git
-    ```
+# Bash-it
+# https://github.com/Bash-it/bash-it
+git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
+~/.bash_it/install.sh
 
-2. Customize the dotStar Files to your Own liking
+# Install Homebrew
+# https://brew.sh/
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-3. Run Install/Updater Script
+# Install MAS - MacOS AppStore CLI Helper
+brew install mas
 
-    ```bash
-    $ source ./install.star
-    ```
+# Brew Bundle
+# https://github.com/Homebrew/homebrew-bundle
+brew bundle install
 
-    This Script will:
-    Make sure your dotStar Files are UpToDate,
-    Creates a Symbolic-Link to your files in your Home `~/dotStar`,
-    Asks if you like to Copy/OverWrite dotStar files to your Home,
-    and Run your BashRC to make dotStar files Effective.
+# Extra
+# SymLink necessary files
+cd ~
+ln -s ~/workspace/dotStar/.curlrc
+ln -s ~/workspace/dotStar/.gitconfig
+```
 
-4. If your choose Not to Copy/OverWrite dotFiles @ Home:
-    You may need further Modification of your Applications and/or your Distribution default dotFiles to Include dotStar Files,
-    I Recommand making Symbolic-Links to `~/dotStar` for Files which do Not Exists in your Home and Merge/Include Others with your Own.
+## You Should Know
 
-5. Fork me and Save your Customizations if you Like
-
-6. Enjoy!
-
-You Should Know
----------------
-These `.*` files were written ASSUMING you are Using `Debian` or `OSX` as your distributions!
-which means All Other Preferred Modifications which where Already Included in `Debian` or `OSX` distributions were Omitted from this Repo!.
-
-For `OSX` you should See Commented Sections.
+These `.*` files were written ASSUMING you are Using `Ubuntu` or `OSX` as your distributions!
+which means All Other Preferred Modifications which where Already Included in `Ubuntu` or `OSX` distributions were Omitted from this Repo!.
 
 Feedback
 --------

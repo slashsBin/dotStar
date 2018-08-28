@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 # Kernel IP forwarding MUST be disabled
 # @/etc/resolv.conf: nameserver 127.0.0.1
 

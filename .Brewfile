@@ -1,83 +1,110 @@
-tap 'blackfireio/blackfire'
-tap 'caskroom/cask'
-tap 'homebrew/bundle'
-tap 'homebrew/completions'
-tap 'homebrew/core'
-tap 'homebrew/dupes'
-tap 'homebrew/emacs'
-tap 'homebrew/fuse'
-tap 'homebrew/nginx'
-tap 'homebrew/php'
-tap 'homebrew/science'
-tap 'homebrew/services'
-tap 'homebrew/versions'
-tap 'homebrew/x11'
-cask 'osxfuse'
-brew 'git', args: ['with-brewed-curl', 'with-pcre']
-brew 'bash'
-brew 'bash-completion@2'
-brew 'openssl'
-brew 'coreutils'
-brew 'ctags'
-brew 'curl'
-brew 'dnscrypt-proxy', args: ['with-plugins'], restart_service: true
-brew 'dnsmasq', restart_service: true
-brew 'editorconfig'
-brew 'emacs'
-brew 'ffmpeg'
-brew 'fswatch'
-brew 'geoip', args: ['with-geoipupdate']
-brew 'geoipupdate'
-brew 'gnuplot'
-brew 'gnutls'
-brew 'go'
-brew 'pinentry'
-brew 'gpg-agent'
-brew 'graphviz'
-brew 'htop'
-brew 'mysql', restart_service: true
-brew 'hydra'
-brew 'xz'
-brew 'jmeter', args: ['with-plugins']
-brew 'jq'
-brew 'most'
-brew 'mplayer'
-brew 'nginx', args: ['with-http2'], restart_service: true
-brew 'ngrep'
-brew 'nikto'
-brew 'nmap'
-brew 'node'
-brew 'ocproxy'
-brew 'openconnect'
-brew 'parallel'
-brew 'polipo'
-brew 'postgresql', restart_service: true
-brew 'ruby'
-brew 'shellcheck'
-brew 'skipfish'
-brew 'speedtest_cli'
-brew 'sqlmap'
-brew 'swift'
-brew 'sysdig'
-brew 'tmux'
-brew 'tor', args: ['devel', 'with-libscrypt']
-brew 'watchman'
-brew 'youtube-dl'
-brew 'zmap'
-brew 'blackfireio/blackfire/blackfire-agent'
-brew 'blackfireio/blackfire/blackfire-php71'
-brew 'homebrew/dupes/openssh'
-brew 'homebrew/emacs/dash-emacs'
-brew 'homebrew/emacs/org-mode'
-brew 'homebrew/fuse/ntfs-3g'
-brew 'homebrew/php/php71'
-brew 'homebrew/php/php71-intl'
-brew 'homebrew/php/php71-mcrypt'
-brew 'homebrew/php/php71-opcache'
-brew 'homebrew/php/php71-xdebug'
-brew 'homebrew/php/php71-yaml'
-brew 'homebrew/science/octave'
-brew 'homebrew/science/r'
-cask 'emacs'
-cask 'mplayerx'
-cask 'wkhtmltopdf'
+# Taps
+tap "blackfireio/blackfire"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+
+# Brews
+brew "ansible"
+brew "ansible-lint"
+brew "bash"
+brew "blackfireio/blackfire/blackfire-agent"
+brew "blackfireio/blackfire/blackfire-php72"
+brew "byobu"
+brew "coreutils"
+brew "curl"
+brew "dependency-check"
+brew "diffoscope"
+brew "dnscrypt-proxy"
+brew "dnsmasq", restart_service: true
+brew "editorconfig"
+brew "emacs"
+brew "ffmpeg"
+brew "gnutls"
+brew "git"
+brew "goaccess"
+brew "graphviz"
+brew "htop"
+brew "hydra"
+brew "i2p"
+brew "jq"
+brew "lynis"
+brew "mas"
+brew "mitmproxy"
+brew "nikto"
+brew "nginx", restart_service: true
+brew "nmap"
+brew "node"
+brew "nyx"
+brew "openssl"
+brew "ocproxy"
+brew "openconnect"
+brew "openssh"
+brew "php", restart_service: true
+brew "plantuml"
+brew "parallel"
+brew "postgresql", restart_service: true
+brew "redis", restart_service: true
+brew "shellcheck"
+brew "skipfish"
+brew "speedtest_cli"
+brew "sqlmap"
+brew "swift"
+brew "swiftlint"
+brew "sysdig"
+brew "sshfs"
+brew "tmux"
+brew "torsocks"
+brew "tor", args: ["devel", "with-libscrypt"]
+brew "xz"
+brew "yarn"
+brew "youtube-dl"
+
+# Casks
+cask "adium"
+cask "bitbar"
+cask "dropbox"
+cask "copyq"
+cask "docker"
+cask "emacs"
+cask "font-fira-code"
+cask "google-chrome"
+cask "gpg-suite"
+cask "homebrew/cask-versions/firefox-developer-edition"
+cask "insomnia"
+cask "iterm2"
+cask "jetbrains-toolbox"
+cask "keepassxc"
+cask "minikube"
+cask "mysqlworkbench"
+cask "osxfuse"
+cask "openconnect-gui"
+cask "owasp-zap"
+cask "postman"
+cask "protonvpn"
+cask "safari-technology-preview"
+cask "slack"
+cask "spectacle"
+cask "sonar"
+cask "tableplus"
+cask "transmission"
+cask "torbrowser"
+cask "vlc"
+cask "virtualbox"
+cask "virtualbox-extension-pack"
+cask "wireshark"
+
+# MAS
+mas "Amphetamine", id: 937984704
+mas "Avira Security", id: 1376508752
+mas "DrCleaner", id: 921458519
+mas "DrUnarchiver", id: 1127253508
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Speedtest", id: 1153157709
+mas "Trello", id: 1278508951
+mas "Xcode", id: 497799835

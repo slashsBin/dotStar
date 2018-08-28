@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 # Forward Proxy via OpenSSH
 # This is Useful for Local Cross-Network Port Forwarding
 

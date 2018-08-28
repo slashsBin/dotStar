@@ -15,7 +15,7 @@ export LC_ALL="en_US.UTF-8"
 export PAGER="most"
 
 # Git Ignore Invalid SSL Certificate
-export GIT_SSL_NO_VERIFY=true
+#export GIT_SSL_NO_VERIFY=true
 
 # Directory Path
 export CDPATH=".:$HOME:$HOME/WorkSpace/:$CDPATH"
@@ -26,5 +26,5 @@ export CDPATH=".:$HOME:$HOME/WorkSpace/:$CDPATH"
 #export HOMEBREW_GITHUB_API_TOKEN=
 
 # Go
-export GOPATH="/usr/local/opt/go/libexec"
-export PATH="$GOPATH/bin:$PATH"
+#export GOPATH="/usr/local/opt/go/libexec"
+#export PATH="$GOPATH/bin:$PATH"

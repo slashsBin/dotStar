@@ -31,9 +31,9 @@ alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
-	colorflag="--color"
+    colorflag="--color"
 else # OS X `ls`
-	colorflag="-G"
+    colorflag="-G"
 fi
 alias ll="ls -laFh ${colorflag}"
 
@@ -72,3 +72,8 @@ alias sf="bin/console"
 alias cgrep="grep -Ev '^#'"
 # Case-Insensitive Grep
 alias igrep="grep -i"
+
+# Light PHP CLI
+alias phpl="php -d xdebug.enable=0 -d memory.limit=-1"
+
+alias xphp="XDEBUG_CONFIG=\"remote_enable=1 profiler_enable=1\" php"

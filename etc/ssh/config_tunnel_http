@@ -11,14 +11,14 @@
 
 # 1 Chain Proxy = 1 HTTP Proxy
 Host server1
-  Hostname=127.0.0.1
-  Port=563
-  StrictHostKeyChecking=no
-  ProxyCommand /usr/bin/proxytunnel -v -p server1IP:server1WWWPort -d %h:%p
+    Hostname=127.0.0.1
+    Port=563
+    StrictHostKeyChecking=no
+    ProxyCommand /usr/bin/proxytunnel -v -p server1IP:server1WWWPort -d %h:%p
 
 # 2 Chains Proxy = 2 HTTP Proxies
 Host server2
-  Hostname=127.0.0.1
-  Port=563
-  StrictHostKeyChecking=no
-  ProxyCommand /usr/bin/proxytunnel -v -p secondProxyIP:secondProxyPort -r server2IP:server2WWWPort -d %h:%p
+    Hostname=127.0.0.1
+    Port=563
+    StrictHostKeyChecking=no
+    ProxyCommand /usr/bin/proxytunnel -v -p secondProxyIP:secondProxyPort -r server2IP:server2WWWPort -d %h:%p

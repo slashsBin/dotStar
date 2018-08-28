@@ -1,132 +1,130 @@
 [user]
-	name = Mohammad Shokri
-	email = shokri.md@gmail.com
-	userConfigOnly = true
-	signingkey = C532627E
+    name = Mohammad Shokri
+    email = shokri.md@gmail.com
+    userConfigOnly = true
+    signingkey = 005D87F1
 
 [alias]
-	# Status
-	s = status -sb
+    # Status
+    s = status -sb
 
-	# Branch
-	b = branch -av
+    # Branch
+    b = branch -av
 
-	# Log
-	l = log -n20 --graph --oneline --abbrev-commit
-	lol = log --all --graph --decorate --oneline --abbrev-commit
-	lols = log --all --graph --decorate --oneline --simplify-by-decoration
-	last = log -1 HEAD
-	contributors = shortlog -sne
+    # Log
+    l = log -n20 --graph --oneline --abbrev-commit
+    lol = log --all --graph --decorate --oneline --abbrev-commit
+    lols = log --all --graph --decorate --oneline --simplify-by-decoration
+    last = log -1 HEAD
+    contributors = shortlog -sne
 
-	# List
-	ls = ls-files
+    # List
+    ls = ls-files
 
-	# Tags
-	t = tag -l
+    # Tags
+    t = tag -l
 
-	# Remotes
-	r = remote -v
+    # Remotes
+    r = remote -v
 
-	# UnStage/Revert
-	unstage = reset HEAD --
-	discard = checkout --
-	uncommit = reset --mixed HEAD~
-	amend = commit --amend
-	nevermind = !git reset --hard HEAD & git clean -d -f
+    # UnStage/Revert
+    unstage = reset HEAD --
+    discard = checkout --
+    uncommit = reset --mixed HEAD~
+    amend = commit --amend
+    nevermind = !git reset --hard HEAD & git clean -d -f
 
-	# SubModules
-	pushall = push --recurse-submodules=on-demand
+    # SubModules
+    pushall = push --recurse-submodules=on-demand
 
     # Show files ignored by git:
-	ignored = ls-files -o -i --exclude-standard
+    ignored = ls-files -o -i --exclude-standard
 
-	# GitIgnore.IO
-	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+    # GitIgnore.IO
+    ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 
 [core]
-	# Use custom GitIgnore
-	excludesfile = ~/.gitignore
+    # Use custom GitIgnore
+    excludesfile = ~/.gitignore
 
-	# Set ATOM as Default Editor
-	#editor = "atom --wait"
+    # Set ATOM as Default Editor
+    #editor = "atom --wait"
 
-	# Set eMacs as Default Editor
-	editor = "emacs -mm"
+    # Set eMacs as Default Editor
+    editor = "emacs -mm"
 
-	# Compression Level
-	compression = 9
+    # Compression Level
+    compression = 9
 
-	# Ignore X-Bit Difference
-	fileMode = false
+    # Ignore X-Bit Difference
+    fileMode = false
 
-	# Linux/Mac Compatible Line Endings
-	autocrlf = input
+    # Linux/Mac Compatible Line Endings
+    autocrlf = input
 
 [commit]
-	gpgSign = true
+    gpgSign = true
 
 [color]
-	# Colorize Output when Possible
-	ui = auto
+    # Colorize Output when Possible
+    ui = auto
 
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 
 [color "diff"]
-	meta = yellow
-	frag = magenta
-	old = red
-	new = green
-	whitespace = red reverse
+    meta = yellow
+    frag = magenta
+    old = red
+    new = green
+    whitespace = red reverse
 
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 
 [credential]
-	# Cache Credentials for 1 Hour
-	helper = cache --timeout 3600
+    # Cache Credentials for 1 Hour
+    helper = cache --timeout 3600
 
-	# OSX KeyChain
-	#helper = osxkeychain
+    # OSX KeyChain
+    #helper = osxkeychain
 
 [merge]
-	# Meld Diff Tool
-	tool = meld
+    # Meld Diff Tool
+    #tool = meld
 
-	# P4Merge
-	#tool = p4merge
-
-	# OSX XCode
-	#tool = opendiff
+    # OSX XCode
+    tool = opendiff
 
 [http]
-      # Parallel HTTP Requests
-      #maxRequests = 8
-      # Max Post Buffer Size in Bytes, Chunked for Bigger
-      #postBuffer = 524288000
+    # Parallel HTTP Requests
+    #maxRequests = 8
+    # Max Post Buffer Size in Bytes, Chunked for Bigger
+    #postBuffer = 524288000
 
 [push]
-	# Limit Pushes to Current Branch(Git2 Default)
-	default = simple
+    # Limit Pushes to Current Branch(Git2 Default)
+    default = simple
 
 [branch]
-	# Fetch & ReBase, not Merge
-	#autosetuprebase = always
+    # Fetch & ReBase, not Merge
+    #autosetuprebase = always
 
 [difftool "p4merge"]
-	# P4Merge for OSX
-	#cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
+    # P4Merge for OSX
+    #cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
 
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    required = true
+    process = git-lfs filter-process
 
 [gui]
-	fontdiff = -family Monoid -size 14 -weight normal -slant roman -underline 0 -overstrike 0
-	diffcontext = 10
-	tabsize = 4
+    fontdiff = -family \"Fira Code\" -size 14 -weight normal -slant roman -underline 0 -overstrike 0
+    diffcontext = 10
+    tabsize = 4

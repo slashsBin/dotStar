@@ -1,34 +1,34 @@
 # MkDir & Change Directory to it
 function mkd() {
-	mkdir -p "$@" && cd "$@"
+    mkdir -p "$@" && cd "$@"
 }
 
 # Data URL of a File
 function dataurl() {
-	local mimeType=$(file -b --mime-type "$1")
-	if [[ $mimeType == text/* ]]; then
-		mimeType="${mimeType};charset=utf-8"
-	fi
-	echo "data:${mimeType};base64,$(openssl base64 -in "$1" | tr -d '\n')"
+    local mimeType=$(file -b --mime-type "$1")
+    if [[ $mimeType == text/* ]]; then
+        mimeType="${mimeType};charset=utf-8"
+    fi
+    echo "data:${mimeType};base64,$(openssl base64 -in "$1" | tr -d '\n')"
 }
 
 # Run `dig` and display the most useful info
 function digga() {
-	dig +noall "$1" any +multiline +answer +stats;
+    dig +noall "$1" any +multiline +answer +stats;
 }
 
 # Knock Knock
 function knock() {
-	server=$1
-	for port in $@; do nmap -Pn --host_timeout 201 --max-retries 0 -p $port $server; done
+    server=$1
+    for port in $@; do nmap -Pn --host_timeout 201 --max-retries 0 -p $port $server; done
 }
 
 # View HTTP Traffic
 function sniff() {
-	 sudo ngrep -d $1 -t '^(GET|POST) ' 'tcp and port 80';
+    sudo ngrep -d $1 -t '^(GET|POST) ' 'tcp and port 80';
 }
 function httpdump() {
-	 sudo tcpdump -i $1 -n -s 0 -w - | grep -a -o -E "Host: .*|GET /.*";
+    sudo tcpdump -i $1 -n -s 0 -w - | grep -a -o -E "Host: .*|GET /.*";
 }
 
 # Install My Kind of Bluez Tools
@@ -41,9 +41,9 @@ function megaInstall() {
     case $1 in
         'core')
             if [ `uname` == 'Darwin' ]; then
-	            ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+                ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
             else
-	            ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+                ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
             fi
             ;;
         'tools')
@@ -143,6 +143,7 @@ function megaUpdate() {
             sudo gem update
             brew update
             brew upgrade
+            brew cask upgrade
             brew cleanup
             brew prune
             brew cask cleanup
@@ -155,8 +156,6 @@ function megaUpdate() {
             symfony -v self-update
             php-cs-fixer -v self-update
             phpunit --self-update
-            arc upgrade
-            spress -v self-update
             ;;
         'all')
             megaUpdate core
@@ -181,13 +180,13 @@ function mirrorSelect() {
 # OpenConnect
 # Usage: openconnect <USER> <PASSWD> <SERVER>
 function openconnect() {
-    echo $2 | sudo openconnect -u $1 --no-cert-check -d --timestamp -v --passwd-on-stdin $3
+    echo $2 | sudo openconnect -u $1 -d --timestamp -v --passwd-on-stdin $3
 }
 
 # OpenConnect Proxy
 # Usage: openconnectProxy <USER> <PASSWD> <SERVER> <Socks5Port>
 function openconnectProxy() {
-    echo $2 | sudo openconnect -u $1 --no-cert-check -d --timestamp -v --passwd-on-stdin --script-tun --script "ocproxy -D $4 -v" $3
+    echo $2 | sudo openconnect -u $1 -d --timestamp -v --passwd-on-stdin --script-tun --script "ocproxy -D $4 -v" $3
 }
 
 # Symfony Watch for Changes
@@ -212,4 +211,9 @@ function aliasAdd() {
     local last_command=$(echo `history | tail -n2 | head -n1` | sed 's/[0-9]* //')
     echo alias $1="'""$last_command""'" >> ~/.aliases
     source ~/.bash_profile
+}
+
+# Validate & Lints Swagger API
+function lintSwagger() {
+    curl -X POST -d @$1 -H 'Content-Type:application/json' -s http://online.swagger.io/validator/debug | jq .
 }

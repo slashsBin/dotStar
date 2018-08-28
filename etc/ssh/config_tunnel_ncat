@@ -1,4 +1,4 @@
 # Tunnel SSH throw HTTP Proxy usinf NCat
 
 Host gitlab.com
-  ProxyCommand /usr/bin/ncat --proxy-type http --proxy 127.0.0.1:8123 %h:%p
+    ProxyCommand /usr/bin/ncat --proxy-type http --proxy 127.0.0.1:8123 %h:%p
