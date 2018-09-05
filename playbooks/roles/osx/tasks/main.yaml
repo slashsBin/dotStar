@@ -1,0 +1,7 @@
+---
+
+- name: Import OSX defaults task
+  import_tasks: defaults.yaml
+
+- name: Import homebrew task
+  import_tasks: homebrew.yaml

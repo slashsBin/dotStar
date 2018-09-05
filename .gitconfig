@@ -1,8 +1,5 @@
 [user]
-    name = Mohammad Shokri
-    email = shokri.md@gmail.com
     userConfigOnly = true
-    signingkey = 005D87F1
 
 [alias]
     # Status

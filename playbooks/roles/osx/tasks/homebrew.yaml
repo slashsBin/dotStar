@@ -1,0 +1,20 @@
+---
+
+- name: Update homebrew
+  homebrew:
+    update_homebrew: yes
+
+- name: Install MAS - MacOS appstore CLI helper
+  homebrew:
+    name: mas
+    state: latest
+
+- name: SymLink brew bundles
+  file:
+    src: '{{ dotStarPath }}/.Brewfile'
+    dest: ~/.Brewfile
+    state: link
+
+# https://github.com/Homebrew/homebrew-bundle
+- name: Install brew bundles
+  command: brew bundle install --global

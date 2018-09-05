@@ -77,3 +77,13 @@ alias igrep="grep -i"
 alias phpl="php -d xdebug.enable=0 -d memory.limit=-1"
 
 alias xphp="XDEBUG_CONFIG=\"remote_enable=1 profiler_enable=1\" php"
+
+# Ring the terminal bell, and put a badge on Terminal.app’s Dock icon
+# (useful when executing time-consuming commands)
+alias badge="tput bel"
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec $SHELL -l"

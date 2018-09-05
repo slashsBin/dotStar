@@ -1,0 +1,8 @@
+---
+
+- name: dotStar
+  hosts: all
+  roles:
+    - common
+    - role: osx
+      when: 'ansible_os_family == "Darwin"'

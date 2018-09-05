@@ -1,0 +1,6 @@
+---
+
+- name: Install/Update dotStar
+  git:
+    repo: 'git@github.com:slashsBin/dotStar.git'
+    dest: '{{ dotStarPath }}'

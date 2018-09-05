@@ -1,0 +1,32 @@
+---
+
+- name: Check for workspace directory
+  file:
+    path: '{{ workspacePath }}'
+    state: directory
+
+- name: SymLink bash dot files
+  file:
+    src: '{{ dotStarPath }}/{{ item }}'
+    dest: ~/{{ item }}
+    state: link
+  with_items:
+    - .bash_exports
+    - .bash_aliases
+    - .bash_functions
+    - .bash_extra
+    - .bashrc
+    - .bash_profile
+
+- name: SymLink dotStar files
+  file:
+    src: '{{ dotStarPath }}/{{ item }}'
+    dest: ~/{{ item }}
+    state: link
+  with_items:
+    - .curlrc
+    - .gitconfig
+    - .psqlrc
+
+- name: Import git task
+  import_tasks: git.yaml

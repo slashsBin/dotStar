@@ -18,33 +18,14 @@ Use cURL to get a Single Item from Repo:
 curl -L https://github.com/slashsBin/dotStar/raw/master/<path>
 ```
 
-## Installation - Manual
-
+## Installation - Ansible
 ```bash
 # Clone Repo
 git clone https://github.com/slashsBin/dotStar.git ~/workspace/dotStar
 
-# Bash-it
-# https://github.com/Bash-it/bash-it
-git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
-~/.bash_it/install.sh
-
-# Install Homebrew
-# https://brew.sh/
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# Install MAS - MacOS AppStore CLI Helper
-brew install mas
-
-# Brew Bundle
-# https://github.com/Homebrew/homebrew-bundle
-brew bundle install
-
-# Extra
-# SymLink necessary files
-cd ~
-ln -s ~/workspace/dotStar/.curlrc
-ln -s ~/workspace/dotStar/.gitconfig
+# Run Playbook
+cd playbooks
+ansible-playbook site.yaml
 ```
 
 ## You Should Know

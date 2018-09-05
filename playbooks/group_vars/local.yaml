@@ -1,0 +1,12 @@
+---
+
+# Personal Info
+fullname: Mohammad Shokri
+username: mohammad
+nickname: slashsbin
+email: shokri.md@gmail.com
+gpg_sign_key: 005D87F1
+
+# System Options
+workspacePath: ~/workspace
+dotStarPath: '{{ workspacePath }}/dotStar'

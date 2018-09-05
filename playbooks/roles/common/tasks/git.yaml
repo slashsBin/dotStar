@@ -1,0 +1,19 @@
+---
+
+- name: Set personal git config - fullname
+  git_config:
+    name: user.name
+    scope: global
+    value: '{{ fullname }}'
+
+- name: Set personal git config - email
+  git_config:
+    name: user.email
+    scope: global
+    value: '{{ email }}'
+
+- name: Set personal git config - signkey
+  git_config:
+    name: user.signingkey
+    scope: global
+    value: '{{ gpg_sign_key }}'

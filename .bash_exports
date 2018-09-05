@@ -1,30 +1,30 @@
 # Set eMacs as Default Text Editor
-export EDITOR="emacs"
+export EDITOR="emacs";
 
 # Larger bash history (allow 32^3 entries)
-export HISTSIZE=-1
-export HISTFILESIZE=-1
-export HISTCONTROL=ignoredups
-export HISTTIMEFORMAT="[%F%t%T]%t"
+export HISTSIZE='32768';
+export HISTFILESIZE="${HISTSIZE}";
+export HISTCONTROL='ignoreboth';
+export HISTTIMEFORMAT="[%F%t%T]%t";
 
 # Prefer Locale US and Encoding UTF8
-export LANG="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8";
+export LC_ALL="en_US.UTF-8";
 
 # More Interactive Manual Pages
-export PAGER="most"
+export PAGER="most";
 
 # Git Ignore Invalid SSL Certificate
-#export GIT_SSL_NO_VERIFY=true
+#export GIT_SSL_NO_VERIFY=true;
 
 # Directory Path
-export CDPATH=".:$HOME:$HOME/WorkSpace/:$CDPATH"
+export CDPATH=".:$HOME:$HOME/workspace/:$CDPATH";
 
 # HomeBrew
-#export HOMEBREW_VERBOSE=true
-#export HOMEBREW_CURL_VERBOSE=true
-#export HOMEBREW_GITHUB_API_TOKEN=
+#export HOMEBREW_VERBOSE=true;
+#export HOMEBREW_CURL_VERBOSE=true;
+#export HOMEBREW_GITHUB_API_TOKEN=;
 
 # Go
-#export GOPATH="/usr/local/opt/go/libexec"
-#export PATH="$GOPATH/bin:$PATH"
+#export GOPATH="/usr/local/opt/go/libexec";
+#export PATH="$GOPATH/bin:$PATH";

@@ -47,3 +47,6 @@ auto-save-list
 
 #### JetBrains
 .idea
+
+#### Ansible
+*.retry
