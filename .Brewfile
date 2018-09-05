@@ -51,6 +51,7 @@ brew "parallel"
 brew "pv"
 brew "postgresql", restart_service: true
 brew "ponysay"
+brew "python"
 brew "redis", restart_service: true
 brew "shellcheck"
 brew "skipfish"
