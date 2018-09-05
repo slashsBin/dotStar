@@ -22,7 +22,6 @@ brew "diffoscope"
 brew "dnscrypt-proxy"
 brew "dnsmasq", restart_service: true
 brew "editorconfig"
-brew "emacs"
 brew "ffmpeg"
 brew "gnutls"
 brew "gnupg"
@@ -51,6 +50,7 @@ brew "plantuml"
 brew "parallel"
 brew "pv"
 brew "postgresql", restart_service: true
+brew "ponysay"
 brew "redis", restart_service: true
 brew "shellcheck"
 brew "skipfish"

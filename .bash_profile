@@ -45,3 +45,6 @@ fi
 
 # iTerm2 Shell Integration
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# Unicorn love
+which ponysay > /dev/null && ponysay -q
