@@ -21,7 +21,7 @@
     domain: NSGlobalDomain
     key: KeyRepeat
     type: int
-    value: 1
+    value: 2
     state: present
 
 - name: Set a blazingly fast keyboard repeat rate
@@ -29,5 +29,5 @@
     domain: NSGlobalDomain
     key: InitialKeyRepeat
     type: int
-    value: 10
+    value: 15
     state: present
