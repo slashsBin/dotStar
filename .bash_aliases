@@ -1,5 +1,5 @@
 # GoTo
-alias w="cd ~/WorkSpace"
+alias w="cd ~/workspace"
 alias t="cd ~/var/tmp"
 alias d="cd ~/Downloads"
 
@@ -87,3 +87,6 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+# Use bat instead of cat
+alias cat="bat"
