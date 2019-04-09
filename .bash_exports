@@ -30,12 +30,13 @@ export PAGER="less";
 #export GIT_SSL_NO_VERIFY=true;
 
 # Directory Path
-export CDPATH=".:$HOME:$HOME/workspace/:$CDPATH";
+export CDPATH=".:$HOME/workspace/:$CDPATH";
 
 # HomeBrew
 #export HOMEBREW_VERBOSE=true;
 #export HOMEBREW_CURL_VERBOSE=true;
 #export HOMEBREW_GITHUB_API_TOKEN=;
+#export HOMEBREW_FORCE_BREWED_CURL=true
 
 # Go
 #export GOPATH="/usr/local/opt/go/libexec";
