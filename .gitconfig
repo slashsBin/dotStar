@@ -59,8 +59,8 @@
     # Linux/Mac Compatible Line Endings
     autocrlf = input
 
-[commit]
-    gpgSign = true
+    # Fancy Diff
+    pager = diff-so-fancy | less --tabs=4 -RFX
 
 [color]
     # Colorize Output when Possible
@@ -73,10 +73,17 @@
 
 [color "diff"]
     meta = yellow
-    frag = magenta
-    old = red
-    new = green
+    frag = magenta bold
+    commit = yellow bold
+    old = red bold
+    new = green bold
     whitespace = red reverse
+
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 52
 
 [color "status"]
     added = yellow
