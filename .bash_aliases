@@ -3,6 +3,9 @@ alias w="cd ~/workspace"
 alias t="cd ~/var/tmp"
 alias d="cd ~/Downloads"
 
+# Emacs
+alias e="emacs -nw"
+
 # My Real Public IP
 alias ifconfig.me="curl ifconfig.me"
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -90,3 +93,6 @@ alias reload="exec $SHELL -l"
 
 # Use bat instead of cat
 alias cat="bat"
+
+# tldr tips
+alias help='tldr'
