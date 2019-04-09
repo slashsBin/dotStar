@@ -1,6 +1,8 @@
 \set PROMPT1 '%n@%M:%> {%/}%#'
-\pset null '[null]'
+\timing
+\pset null '¤'
 \set COMP_KEYWORD_CASE upper
 \set HISTSIZE 2000
+\set HISTCONTROL ignoredups
 \x auto
 \set VERBOSITY verbose
