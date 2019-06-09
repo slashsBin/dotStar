@@ -15,8 +15,7 @@
     - .bash_aliases
     - .bash_functions
     - .bash_extra
-    - .bashrc
-    - .bash_profile
+    - .bashrc.dotStar
 
 - name: SymLink dotStar files
   file:

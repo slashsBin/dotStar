@@ -40,6 +40,9 @@
     # GitIgnore.IO
     ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 
+    # MergeRequest
+    mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+
 [core]
     # Use custom GitIgnore
     excludesfile = ~/.gitignore
@@ -83,7 +86,7 @@
     oldNormal = red bold
     oldHighlight = red bold 52
     newNormal = green bold
-    newHighlight = green bold 52
+    newHighlight = green bold 22
 
 [color "status"]
     added = yellow
@@ -132,3 +135,6 @@
     fontdiff = -family \"Fira Code\" -size 14 -weight normal -slant roman -underline 0 -overstrike 0
     diffcontext = 10
     tabsize = 4
+
+[diff-so-fancy]
+	first-run = false
