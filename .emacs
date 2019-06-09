@@ -7,13 +7,21 @@
 (package-initialize)
 
 (setq package-selected-packages (quote(
+	docker
+	docker-compose-mode
+	dockerfile-mode
 	dotenv-mode
 	dracula-theme
-	web-mode
 	editorconfig
+	gitlab-ci-mode
+	go-mode
 	json-mode
+	markdown-mode
 	nginx-mode
 	org
+	php-mode
+	web-mode
+	yaml-mode
 )))
 
 (package-install-selected-packages)
@@ -44,7 +52,7 @@
 (load-theme 'dracula t)
 
 ;; Font
-(add-to-list 'default-frame-alist '(font . "Fira Code-14"))
+(add-to-list 'default-frame-alist '(font . "Fira Code-12"))
 
 ;; Line Number
 (global-display-line-numbers-mode t)
