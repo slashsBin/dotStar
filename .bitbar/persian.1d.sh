@@ -8,4 +8,4 @@
 # <bitbar.dependencies></bitbar.dependencies>
 # <bitbar.image></bitbar.image>
 
-/usr/local/bin/php -r 'echo (new \IntlDateFormatter("fa_IR@calendar=persian", \IntlDateFormatter::FULL, \IntlDateFormatter::NONE, "Asia/Tehran", \IntlDateFormatter::TRADITIONAL))->format(new DateTime());'
+/usr/bin/env php -r 'echo (new \IntlDateFormatter("fa_IR@calendar=persian", \IntlDateFormatter::FULL, \IntlDateFormatter::NONE, "Asia/Tehran", \IntlDateFormatter::TRADITIONAL))->format(new DateTime());'
