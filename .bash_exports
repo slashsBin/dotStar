@@ -39,8 +39,9 @@ export CDPATH=".:$HOME/workspace/:$CDPATH";
 #export HOMEBREW_FORCE_BREWED_CURL=true
 
 # Go
-#export GOPATH="/usr/local/opt/go/libexec";
-#export PATH="$GOPATH/bin:$PATH";
+export GOROOT="/snap/go/current"
+export GOPATH="$HOME/go";
+export PATH="$GOPATH/bin:$PATH";
 
 # Git HTTP Proxy through Tor HTTP Tunnel
 #GIT_PROXY_COMMAND='nc -x 127.0.0.1:1950 $1 $2'
