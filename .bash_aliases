@@ -96,3 +96,15 @@ alias cat="bat"
 
 # tldr tips
 alias help='tldr'
+
+# MITMProxy
+alias mitm="docker run --rm -it -v ~/.mitmproxy:/home/mitmproxy/.mitmproxy -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmweb --web-iface 0.0.0.0"
+
+# Swagger UI
+alias openapi="docker run -p 8888:8080 -e SWAGGER_JSON=/app/openapi.yaml -v /app swaggerapi/swagger-ui"
+
+# Gitlab Runner
+alias gitlab-runner="docker run --rm -it -v ${PWD}:/home/gitlab-runner -v /var/run/docker.sock:/var/run/docker.sock -w /home/gitlab-runner gitlab/gitlab-runner exec docker"
+
+# Composer
+alias composer-docker="docker run -it --rm -v $PWD:/app composer"
